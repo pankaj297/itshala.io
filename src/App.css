@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.togglebt{
+  margin-left: 5px;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width: 100%;
+  
+}
+.Home{
+  margin-top: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+  scroll-behavior: smooth;
 }
 
-.App-link {
-  color: #61dafb;
+.newNav ul li{
+   margin-right: 20px;
+}
+.HomeCardTitle {
+      font-size: 40px;
+      font-weight: 900;
+    }
+.Trybtn{
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.CourseSection{
+    background-color: #F0F5FF;
+}
+
+.Logo{
+  width: 50px;
+}
+.Logos{
+  width: 40% !important;
+}
+.imgblowtext{
+   font-size: 20px;
+}
+
+.roundimg1{
+  width: 3rem;
+}
+
+.cmtcardbio{
+  font-size: 13px;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+  .HomeCardTitle {
+      font-size: 27px;
+    }
+        .Trybtn {
+          width: 100%;
+        }
+                .Homeimg {
+                  padding-top: 10px;
+                }
+                                .Logo {
+                                  width: 50px;
+                                }
+                                .Logos {
+                                  width: 100% !important;
+                                }
+                                .livetext {
+                                  font-size: 12px;
+                                }
+                              .LiveClasses{
+                                font-size: 20px;
+                              }
+                             
+}
+
+.pngimg{
+   width: 300px;
+
+}
+
+@media only screen and (max-width: 800px){
+  .Logo {
+      width: 50px;
+    }
+  
+    .Logos {
+      width: 100% !important;
+    }
+           
+      
+}
+
+.logcard {
+  background-color: blue;
+}
+.mediaicons{
+    box-shadow: 2px 2px 8px skyblue;
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+     .CourseCard{
+       width: 27rem;
+     }
+        
+     
+       
+}
+
+
+@media only screen and (min-width: 1300px){
+  .cardss .card {
+      margin: 20px;
+      width: 30%;
+    }
+    .video1{
+      height: 300px;
+      width: 500px;
+    }
+    .veri{
+      margin-left: 180px;
+    }
+}
+
+
+
+
+/* ---blog---------- */
+.blogsection{
+   margin-top: 150px;
+}
+
+@media (max-width: 576px) {
+      .pngimg{
+        width: 150px;
+        height: 150px;
+      }
+      .LernBtn{
+         height: 40px;
+         font-size: 15px;
+      }
+      .Rebytext{
+         font-size: 6px;
+      }
+}
+
+@media (min-width: 700px)
+{
+  .serchblog{
+    width: 600px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.blogcardsshadow{
+   box-shadow: 3px 5px 8px silver;
+}
+
+.active{
+  color: green;
 }
