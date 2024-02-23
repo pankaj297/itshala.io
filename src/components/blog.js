@@ -9,12 +9,11 @@ function Blog() {
 
   return (
     <>
-    
-      <div className="header bg-body-tertiary fixed-top">
-        <nav className="navbar p-2 navbar-expand-md">
+      <div className="header bg-body-secondary  fixed-top">
+        <nav className="navbar  navbar-expand-md">
           <div className="container-fluid togglebt">
             <button
-              className="ms-3 bg-light  fs-2 border-0 d-block d-md-none"
+              className="ms-3 bg-body-secondary  fs-2 border-0 d-block d-md-none"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -22,20 +21,21 @@ function Blog() {
               aria-label="Toggle navigation"
             >
               <span className="icontog">
-                <i className="bi bi-grid"></i>
+                <i className="bi bi-grid text-primary "></i>
               </span>
             </button>
+
             <a className="m-3 d-none d-md-block" href="/">
-              <i className="bi bi-mortarboard-fill fs-2 text-success"></i>
+              <img src="img/TitleLogo.png" alt="logo" height={35} />
             </a>
 
             <a
               className="navbar-brand  d-none d-md-block d-lg-block"
               href="_blank"
             >
-              <b>INTERVIEW</b> <b className="m-2 text-success">READY</b>
+              <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
             </a>
-
+            {/* ---------------small screen----------- */}
             <div
               className="offcanvas offcanvas-start float-start "
               tabindex="-1"
@@ -73,7 +73,7 @@ function Blog() {
                     </a>
                     <ul className="dropdown-menu fs-4">
                       <li>
-                        <a className="dropdown-item" href="_blank">
+                        <a className="dropdown-item" href="/systemdesign">
                           System Design Simplified
                         </a>
                       </li>
@@ -90,12 +90,12 @@ function Blog() {
                     </ul>
                   </li>
                   <li className="nav-item d-block d-md-none ">
-                    <Link
-                       to="/blog"
+                    <a
+                      href="/blog"
                       className="nav-link pointer-event  active fs-3 fw-bold"
                     >
                       Blog
-                    </Link>
+                    </a>
                   </li>
                   <li className="nav-item d-block d-md-none fs-3 fw-bold">
                     <a className="nav-link active" aria-current="page" href="/">
@@ -113,9 +113,11 @@ function Blog() {
                   </li>
                 </ul>
               </div>
+              {/* ---------------small screen----------- */}
             </div>
+
             <a className="m-3 me-auto d-block d-md-none" href="/">
-              <i className="bi bi-mortarboard-fill fs-2 text-success "></i>
+              <img src="img/TitleLogo.png" alt="logo" height={35} />
             </a>
             <ul className="d-flex">
               <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2  m-2">
@@ -130,9 +132,9 @@ function Blog() {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="_blank">
+                    <Link to="/systemdesign" className="dropdown-item">
                       System Design Simplified
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="_blank">
@@ -147,10 +149,7 @@ function Blog() {
                 </ul>
               </li>
               <li className="nav-item  fw-bolder list-unstyled pt-2  m-2 me-0">
-                <Link
-                  to="/blog"
-                  className="nav-link  pointer-event  active"
-                >
+                <Link to="/blog" className="nav-link  pointer-event  active">
                   Blog
                 </Link>
               </li>
@@ -168,7 +167,7 @@ function Blog() {
                 <a href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer">
                   <button
                     type="button"
-                    className="btn border-2 fw-bold btn-outline-success"
+                    className="btn border-2 fw-bold btn-outline-primary"
                   >
                     Try for Free
                   </button>
@@ -268,8 +267,8 @@ function Blog() {
                       </p>
                       <div className="">
                         <img
-                            src={image}
-                        //   src="img/cmt/gk_333.png"
+                          src={image}
+                    
                           className="img-fluid float-start  rounded-start-circle rounded-end-circle  col-3"
                           alt="img"
                         />
@@ -278,7 +277,7 @@ function Blog() {
                             {name}
                           </p>
                           <p className=" float-start ms-1 fw-bold text-secondary ">
-                           {date}
+                            {date}
                           </p>
                         </div>
                       </div>
@@ -289,12 +288,11 @@ function Blog() {
             );
           })}
 
-          
           {/* ------------------card2--------------- */}
         </div>
       </div>
-       <hr className=" fw-bold "/>
-       <Footer />
+      <hr className=" fw-bold " />
+      <Footer />
     </>
   );
 }

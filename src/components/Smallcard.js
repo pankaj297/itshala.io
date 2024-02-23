@@ -85,7 +85,7 @@ const handleButtonClick = (cardId) => {
                   Our instructors join you with live classes! Ask all of your
                   questions freely.
                 </p>
-                
+
                 {expandedCard === 2 && (
                   <p className="card-text-small d-md-none">
                     Our instructors join you with live classes! Ask all of your
@@ -138,7 +138,12 @@ const handleButtonClick = (cardId) => {
 
       {/* ----------------big img--------------------- */}
       <div className="BigImg container-fluid text-center">
-         <img src="img/bigimg.jpeg" className="img-fluid rounded-4" alt="img" />
+        <img
+          src="img/bigimg.jpeg"
+          className="img-fluid   rounded-4"
+          alt="img"
+        
+        />
       </div>
     </>
   );

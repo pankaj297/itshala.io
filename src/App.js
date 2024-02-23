@@ -9,6 +9,7 @@ import Varification from './components/varification';
 import Blog from './components/blog';
 import Faqs from './components/faqs';
 import Comments from './components/comments';
+import Systemdesign from './components/systemdesign';
 
 import { BrowserRouter , Routes, Route} from "react-router-dom";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="blog" element={ <Blog />} />
         <Route path="/faqs" element={ <Faqs />} />
         <Route path="/comments" element={ <Comments /> }/>
+        <Route path="/systemdesign" element={ <Systemdesign />} />
        </Routes>   
     </BrowserRouter>
   );

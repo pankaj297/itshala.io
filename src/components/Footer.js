@@ -6,11 +6,11 @@ function Footer() {
       <div className="m-3 m-md-5 p-lg-5  d-flex row  row-cols-3  row-cols-md-5 ">
         <div className="col-md-5 mb-4  col-12  px-md-3 ">
           <a className="m-3 " href="_blank">
-            <i class="bi bi-mortarboard-fill fs-2 text-success"></i>
+            <i class="bi bi-mortarboard-fill fs-2 text-primary"></i>
           </a>
 
           <a className="navbar-brand fs-4" href="_blank">
-            <b>INTERVIEW</b> <b className="text-success">READY</b>
+            <b>INTERVIEW</b> <b className="text-primary">READY</b>
           </a>
           <p>
             System Design explained with clear, concise videos. Saves time for
@@ -47,7 +47,7 @@ function Footer() {
       <hr className="mt-3  mx-md-5 fw-bold text-dark " />
       <p className="text-center ">© 2023 Interview Ready. All rights reserved.</p>
       <p className="text-center"> <b>Author : </b> Pankaj Naik</p>
-      <p className="text-center fw-bold text-success"> THANK YOU</p>
+      <p className="text-center fw-bold text-primary"> THANK YOU</p>
     </>
   );
 }

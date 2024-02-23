@@ -6,32 +6,32 @@ function Course() {
       {/* ----------------------------card 1-------------------------------- */}
       <div
         id="#cor"
-        className="CourseSection   p-4 m-md-5 pt-5 m-2  mt-5 p-sm-5  rounded-4"
+        className="bgprimay pt-5 m-3 rounded-4"
       >
         <p className="CardTopTextP fs-5 m-2  text-center">
           Master Every Concept. Every Term. Every Detail
         </p>
-        <h3 className="CardTopText fs-1 m-3 fw-bold text-center text-success">
+        <h3 className="CardTopText fs-1 m-3 fw-bold text-center text-primary">
           High Quality Video Lessons
         </h3>
-        <div className="cardss justify-content-center  row row-cols-lg-2 row-cols-xxl-3  p-sm-5 row-cols-xxl-2 g-3">
-          <div class="card mx-3  col-lg-5  col-xl-4 CourseCard border-0">
+        <div className="cardss m-2  justify-content-center  row row-cols-lg-2 row-cols-xxl-3  p-sm-5 row-cols-xxl-2 g-3">
+          <div class="card mx-3 col-lg-5  col-xl-4 CourseCard border-0">
             <img
-              src="img/cardphoto1.jpeg"
-              class="img-fluid card-img-top pb-1 "
+              src="img/thumbnailFvideo.png"
+              class="img-fluid rounded-2  card-img-top my-2"
               alt="img"
             />
             <div class="card-body">
               <h5 class="card-title fw-bold">System Design Simplified</h5>
-              <div className="mt-1 d-flex justify-content-between w-25 w-xs-25">
-                <p className="text-bg-light mx-1 p-1 rounded">SDE1</p>
-                <p className="text-bg-light  p-1 rounded">SDE2</p>
-                <p className="text-bg-light mx-1  p-1 rounded">SDE3</p>
+              <div className="mt-1 d-flex  justify-content-between w-25 w-xs-25">
+                <p className=" bg-primary-subtle   p-1 rounded">SDE1</p>
+                <p className="bg-primary-subtle mx-2 p-1 rounded">SDE2</p>
+                <p className="bg-primary-subtle   p-1 rounded">SDE3</p>
               </div>
-              <div className="roundPhoto1 fw-bold">
+              <div className="roundPhoto1">
                 <img
                   src="img/roundcardphoto1.jpeg"
-                  className="roundimg1 rounded-5"
+                  className="roundimg1  rounded-5"
                   alt="img"
                 />{" "}
                 Gaurav Sen
@@ -45,38 +45,38 @@ function Course() {
             </div>
             <ul class="list-group-item ms-3  list-group-flush">
               <li class="list-group-item">
-                <i class="bi bi-camera-video text-success pe-2"></i>
+                <i class="bi bi-camera-video text-primary pe-2"></i>
                 285+ Video Lessons
               </li>
 
               <li class="list-group-item mt-2">
-                <i class="bi bi-file-text text-success pe-2"></i>44+ Quizzes
+                <i class="bi bi-file-text text-primary pe-2"></i>44+ Quizzes
               </li>
 
               <li class="list-group-item pt-2">
-                <i class="bi bi-file-earmark-arrow-down text-success pe-2"></i>
+                <i class="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
                 64+ Downloadable Resources
               </li>
 
               <li class="list-group-item pt-2">
-                <i class="bi bi-person-video text-success pe-2"></i>Live Classes
+                <i class="bi bi-person-video text-primary pe-2"></i>Live Classes
               </li>
 
               <li class="list-group-item pt-2">
-                <i class="bi bi-file-medical text-success pe-2"></i>Interview
+                <i class="bi bi-file-medical text-primary pe-2"></i>Interview
                 Questions
               </li>
 
               <li class="list-group-item pt-2">
-                <i class="bi bi-clock text-success pe-2"></i>Continuous Updates
+                <i class="bi bi-clock text-primary pe-2"></i>Continuous Updates
               </li>
 
               <li class="list-group-item pt-2">
-                <i class="bi bi-meta text-success pe-2"></i>Lifetime Access
+                <i class="bi bi-meta text-primary pe-2"></i>Lifetime Access
               </li>
             </ul>
             <div class="card-body pt-0">
-              <a href="_blank" class="text-success text-decoration-none">
+              <a href="_blank" class="text-primary text-decoration-none">
                 <b>
                   <y className="text-dark">Buy for</y> 50% OFF
                 </b>
@@ -89,7 +89,7 @@ function Course() {
               </p>
               <a
                 href="_blank"
-                class="btn w-100   border-success border-2  text-success  card-link"
+                class="btn w-100  border-primary  border-2 fw-bold   text-primary  card-link"
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
               </a>
@@ -101,17 +101,17 @@ function Course() {
           <div class="card col-lg-5  col-xl-4 CourseCard border-0 ">
             <img
               src="img/cardphoto2.jpeg"
-              class="img-fluid card-img-top"
+              class="img-fluid my-2 rounded-2  card-img-top"
               alt="img"
             />
             <div class="card-body ">
               <h5 class="card-title fw-bold ">Data Structures & Algorithms</h5>
               <div className="mt-1 d-flex justify-content-between w-25 w-xs-25">
-                <p className="text-bg-light mx-1 p-1 rounded">SDE1</p>
-                <p className="text-bg-light  p-1 rounded">SDE2</p>
-                <p className="text-bg-light mx-1  p-1 rounded">SDE3</p>
+                <p className=" bg-primary-subtle   p-1 rounded">SDE1</p>
+                <p className=" bg-primary-subtle   mx-2  p-1 rounded">SDE2</p>
+                <p className=" bg-primary-subtle   p-1 rounded">SDE3</p>
               </div>
-              <div className="roundPhoto1 fw-bold">
+              <div className="roundPhoto1">
                 <img
                   src="img/roundcardphoto2.jpeg"
                   className="roundimg1 rounded-5 pb-1 "
@@ -169,7 +169,7 @@ function Course() {
               </p>
               <a
                 href="_blank"
-                class="btn w-100   border-danger  border-2  text-danger  card-link"
+                class="btn w-100 fw-bold border-danger  border-2  text-danger  card-link"
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
               </a>
@@ -180,20 +180,20 @@ function Course() {
           <div class="card col-lg-5  col-xl-4 CourseCard border-0 ">
             <img
               src="img/cardphoto3.jpeg"
-              class="img-fluid card-img-top"
+              class="img-fluid my-2 rounded-2  card-img-top"
               alt="img"
             />
             <div class="card-body">
               <h5 class="card-title fw-bold">Behavioural Interviews</h5>
               <div className="mt-1 d-flex justify-content-between w-25 w-xs-25">
-                <p className="text-bg-light mx-1 p-1 rounded">SDE1</p>
-                <p className="text-bg-light  p-1 rounded">SDE2</p>
-                <p className="text-bg-light mx-1  p-1 rounded">SDE3</p>
+                <p className=" bg-primary-subtle  p-1 rounded">SDE1</p>
+                <p className=" bg-primary-subtle mx-2  p-1 rounded">SDE2</p>
+                <p className=" bg-primary-subtle   p-1 rounded">SDE3</p>
               </div>
-              <div className="roundPhoto1 fw-bold">
+              <div className="roundPhoto1">
                 <img
                   src="img/roundcardphoto3.jpeg"
-                  className="roundimg1 rounded-5 pb-1 "
+                  className="roundimg1   rounded-5  "
                   alt="img"
                 />{" "}
                 Ashis Sen
@@ -252,7 +252,7 @@ function Course() {
               </p>
               <a
                 href="_blank"
-                class="btn w-100   border-info border-2  text-info  card-link"
+                class="btn w-100  fw-bold   border-info border-2  text-info  card-link"
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
               </a>

@@ -1,15 +1,10 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-
-
-import React from "react";
-import Home from "./home";
-import { Link } from "react-router-dom";
-
-
-function Header() {
-
+function Systemdesign() {
   return (
     <>
+      {/* -----------nav bar----------- */}
       <div className="header bg-body-secondary  fixed-top">
         <nav className="navbar  navbar-expand-md">
           <div className="container-fluid togglebt">
@@ -178,14 +173,29 @@ function Header() {
           </div>
         </nav>
       </div>
+      {/* -----nav end--------- */}
 
-      <div className="content">
-        <Home />
+      <div className="course1 ">
+        <div className="SDSblue p-4 d-none d-lg-block  d-flex row-cols-lg-2">
+          <div className=" col-lg-7 mx-5 pb-5 ">
+            <h1 className=" fw-bolder  mt-4 ">System Design Simplified</h1>
+            <p className=" fw-medium  fs-5">
+              An A-Z video course on system design patterns and best practices.
+              This course ranges from basic concepts like routing, load
+              balancing and caching to advanced concepts like concurrency,
+              separation of concerns, and design tradeoffs.
+            </p>
+            <p className="fs-5">
+              <i class="bi bi-people-fill fs-4 "></i> 19022+ Students
+              <i class="bi bi-chat-right-text-fill fs-5 mx-4  me-2 "></i>Last updated
+              on 02/2024
+            </p>
+         
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default Header;
-
-
+export default Systemdesign;

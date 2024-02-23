@@ -3,7 +3,7 @@ import React from 'react'
 function Whatsets() {
   return (
     <>
-      <div className="WhatSetSection m-md-5 p-md-3  m-2 m-lg-5 p-2  p-lg-5  bg-primary-subtle   rounded-2">
+      <div className="WhatSetSection m-md-5 p-md-3  m-2 m-lg-5 p-2  p-lg-5  bgprimay   rounded-2">
         <h1 className="text-center fw-bold text-success mt-4 ">
           What sets us apart?
         </h1>
