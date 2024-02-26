@@ -208,11 +208,7 @@ function Systemdesign() {
               ></video>
               <div class="card-body">
                 <h5 class="card-title fw-bold">System Design Simplified</h5>
-                <div className="mt-1 d-flex  justify-content-between w-25 w-xs-25">
-                  <p className=" bg-primary-subtle   p-1 rounded">SDE1</p>
-                  <p className="bg-primary-subtle mx-2 p-1 rounded">SDE2</p>
-                  <p className="bg-primary-subtle   p-1 rounded">SDE3</p>
-                </div>
+              
                 <div className="roundPhoto1">
                   <img
                     src="img/roundcardphoto1.jpeg"
