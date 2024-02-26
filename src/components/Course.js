@@ -14,6 +14,7 @@ function Course() {
         <h3 className="CardTopText fs-1 m-3 fw-bold text-center text-primary">
           High Quality Video Lessons
         </h3>
+        {/* ---------card--------- */}
         <div className="cardss m-2  justify-content-center  row row-cols-lg-2 row-cols-xxl-3  p-sm-5 row-cols-xxl-2 g-3">
           <div class="card mx-3 col-lg-5  col-xl-4 CourseCard border-0">
             <img

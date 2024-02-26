@@ -196,10 +196,33 @@ body{
 
 /* ------------System Design Simplified ---------------- */
 
-.SDSblue{
-  margin-top: 80px;
-   width: 100%;
-   height: 280px;
-   background-color: #2D67D3;
-   color: white;
+/* .cardswidthSDY{
+   width: 20%; 
+} */
+
+@media only screen and (min-width: 992px){
+    .cardswidthSDY {
+        width: 60%;
+        
+      }
+      .SDScards{
+          background-color: #2D67D3;
+      }
+}
+
+@media only screen and (max-width: 992px) {
+  .cardswidthSDY {
+    width: 100%;
+    border: none;
+    margin: 1rem;
+  }
+
+}
+
+.SDScards{
+    margin-top: 80px;
+      width: 100%;
+      /* background-color: #2D67D3; */
+      height: 300px;
+        color: white;
 }

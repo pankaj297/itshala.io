@@ -4,7 +4,7 @@ function Whatsets() {
   return (
     <>
       <div className="WhatSetSection m-md-5 p-md-3  m-2 m-lg-5 p-2  p-lg-5  bgprimay   rounded-2">
-        <h1 className="text-center fw-bold text-success mt-4 ">
+        <h1 className="text-center fw-bold text-primary  mt-4 ">
           What sets us apart?
         </h1>
         <p className="text-center text-secondary ">Here’s a comparison</p>
@@ -27,10 +27,10 @@ function Whatsets() {
                   Educative
                 </th>
                 <th
-                  className="col-md-3 px-lg-5 fs-3 px-md-4 py-3 fs-4  text-light-emphasis fs fw-bold bg-success-subtle  "
+                  className="col-md-3 px-lg-5 fs-3 px-md-4 py-3 fs-4  text-light-emphasis fs fw-bold bg-primary-subtle  "
                   scope="col"
                 >
-                  <i class="bi bi-mortarboard-fill fs-3 text-success   m-1 "></i>
+                  <i class="bi bi-mortarboard-fill fs-3 text-primary   m-1 "></i>
                   INTERVIEW READY
                 </th>
               </tr>
@@ -44,13 +44,13 @@ function Whatsets() {
                   Video Lessons
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
                   <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -61,13 +61,13 @@ function Whatsets() {
                   PDF Resources
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -84,7 +84,7 @@ function Whatsets() {
                   <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -101,7 +101,7 @@ function Whatsets() {
                   <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -118,7 +118,7 @@ function Whatsets() {
                   <i class="bi bi-x-circle-fill fs-3 text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-success"></i>
+                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
             </tbody>

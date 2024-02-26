@@ -17,7 +17,7 @@ function Faqs() {
     <>
       {/* ----------------------------Asked Qestion section---------------------- */}
       <div className="my-5 mx-4 mx-lg-5 mx-md-5">
-        <h2 className="text-center fs-1 fw-bold text-success">
+        <h2 className="text-center fs-1 fw-bold text-primary ">
           Frequently Asked Questions
         </h2>
         <div className="mt-5 row col-lg-12 mx-lg-5">
@@ -46,7 +46,7 @@ function Faqs() {
       </div>
 
       <div className="Liveclass my-4 py-3  p-lg-3  rounded-3 bgprimay  mx-3 mx-md-5 text-center ">
-        <h3 className="LiveClasses fw-bold text-success">Live Classes</h3>
+        <h3 className="LiveClasses mt-md-4 fs-2 fw-bolder  text-primary ">Live Classes</h3>
         <h5 className="livetext text-center text-secondary-emphasis">
           Watch Gaurav resolve doubts for enrolled users
         </h5>

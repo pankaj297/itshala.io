@@ -8,8 +8,8 @@ function Comments() {
 
   return (
     <>
-      <div className="CommentsCards m-2 m-md-5  bgprimay  bg-opacity-10  rounded-3 p-3 ">
-        <h2 className=" fw-bold  text-center text-success">
+      <div className="CommentsCards m-2 m-md-5  bgprimay  bg-opacity-6  rounded-3 p-3 ">
+        <h2 className=" fw-bold  text-center text-primary">
           A Software Engineer’s <br /> Best kept Secret
         </h2>
         <p className="text-center fs-6 text-secondary-emphasis">

@@ -174,24 +174,116 @@ function Systemdesign() {
         </nav>
       </div>
       {/* -----nav end--------- */}
-
-      <div className="course1 ">
-        <div className="SDSblue p-4 d-none d-lg-block  d-flex row-cols-lg-2">
-          <div className=" col-lg-7 mx-5 pb-5 ">
-            <h1 className=" fw-bolder  mt-4 ">System Design Simplified</h1>
-            <p className=" fw-medium  fs-5">
-              An A-Z video course on system design patterns and best practices.
-              This course ranges from basic concepts like routing, load
-              balancing and caching to advanced concepts like concurrency,
-              separation of concerns, and design tradeoffs.
-            </p>
-            <p className="fs-5">
-              <i class="bi bi-people-fill fs-4 "></i> 19022+ Students
-              <i class="bi bi-chat-right-text-fill fs-5 mx-4  me-2 "></i>Last updated
-              on 02/2024
-            </p>
-         
+      <div className="SDScards   d-flex justify-content-center">
+        <div className="course1 d-flex   row-cols-lg-2 ">
+          <div className="SDSblue p-4 d-none d-lg-block col-lg-8 ">
+            <div className=" mx-5 pb-5 ">
+              <h1 className=" fw-bolder  mt-4 ">System Design Simplified</h1>
+              <p className=" fw-medium  fs-5">
+                An A-Z video course on system design patterns and best
+                practices. This course ranges from basic concepts like routing,
+                load balancing and caching to advanced concepts like
+                concurrency, separation of concerns, and design tradeoffs.
+              </p>
+              <p className="fs-5">
+                <i class="bi bi-people-fill fs-4 "></i> 19022+ Students
+                <i class="bi bi-chat-right-text-fill fs-5 mx-4  me-2 "></i>Last
+                updated on 02/2024
+              </p>
+            </div>
           </div>
+          {/* ----card------- */}
+          <div className=" mt-5 ">
+            <div class="card   cardswidthSDY  border-1 border-primary   col-lg-5 mt-lg-5 p-3 ps-1 CourseCard ">
+              {/* <img
+                src="img/thumbnailFvideo.png"
+                class="img-fluid rounded-2  card-img-top my-1"
+                alt="img"
+              /> */}
+              <video
+                className="img-fluid  rounded-3"
+                poster="img/thumbnailFvideo.png"
+                controls
+                src="img/Intro.mp4"
+              ></video>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">System Design Simplified</h5>
+                <div className="mt-1 d-flex  justify-content-between w-25 w-xs-25">
+                  <p className=" bg-primary-subtle   p-1 rounded">SDE1</p>
+                  <p className="bg-primary-subtle mx-2 p-1 rounded">SDE2</p>
+                  <p className="bg-primary-subtle   p-1 rounded">SDE3</p>
+                </div>
+                <div className="roundPhoto1">
+                  <img
+                    src="img/roundcardphoto1.jpeg"
+                    className="roundimg1  rounded-5"
+                    alt="img"
+                  />{" "}
+                  Gaurav Sen
+                </div>
+                <p class="card-text  d-block d-lg-none">
+                  An A-Z video course on system design patterns and best
+                  practices. This course ranges from basic concepts like
+                  routing, load balancing and caching to advanced concepts like
+                  concurrency, separation of concerns, and design tradeoffs.
+                </p>
+              </div>
+              <ul class="list-group-item ms-3  list-group-flush">
+                <li class="list-group-item">
+                  <i class="bi bi-camera-video text-primary pe-2"></i>
+                  285+ Video Lessons
+                </li>
+
+                <li class="list-group-item mt-2">
+                  <i class="bi bi-file-text text-primary pe-2"></i>44+ Quizzes
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
+                  64+ Downloadable Resources
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-person-video text-primary pe-2"></i>Live
+                  Classes
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-file-medical text-primary pe-2"></i>Interview
+                  Questions
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-clock text-primary pe-2"></i>Continuous
+                  Updates
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-meta text-primary pe-2"></i>Lifetime Access
+                </li>
+              </ul>
+              <div class="card-body pt-0">
+                <a href="_blank" class="text-primary text-decoration-none">
+                  <b>
+                    <y className="text-dark">Buy for</y> 50% OFF
+                  </b>
+                </a>
+                <p className="text-dark fw-bold">
+                  ₹7,995.00{" "}
+                  <y className="fw-lighter text-secondary text-decoration-line-through">
+                    ₹15,990.00
+                  </y>
+                </p>
+                <a
+                  href="_blank"
+                  class="btn w-100  border-primary  border-2 fw-bold   text-primary  card-link"
+                >
+                  Learn More <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* ----card end------- */}
         </div>
       </div>
     </>

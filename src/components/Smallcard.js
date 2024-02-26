@@ -19,7 +19,7 @@ const handleButtonClick = (cardId) => {
         <p className="SmcardTextTop1 text-center fs-5">
           You don't need 3 months to prepare for an interview.
         </p>
-        <h1 className="SmcardTextTop2 text-center fw-bold text-success ">
+        <h1 className="SmcardTextTop2 text-center fw-bold text-primary  ">
           More than just watching videos
         </h1>
         <div className="row mt-5">
