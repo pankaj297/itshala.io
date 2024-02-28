@@ -44,6 +44,7 @@ function Faqs() {
           })}
         </div>
       </div>
+      
 
       <div className="Liveclass my-4 py-3  p-lg-3  rounded-3 bgprimay  mx-3 mx-md-5 text-center ">
         <h3 className="LiveClasses mt-md-4 fs-2 fw-bolder  text-primary ">Live Classes</h3>
@@ -81,6 +82,7 @@ function Faqs() {
           </div>
         </div>
       </div>
+      
 
       <hr className="m-3 m-md-5  fw-bold text-dark " />
     </>

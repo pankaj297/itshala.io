@@ -202,27 +202,71 @@ body{
 
 @media only screen and (min-width: 992px){
     .cardswidthSDY {
-        width: 60%;
-        
+        width: 100%;
+        margin-top: -230px;
       }
+        
       .SDScards{
           background-color: #2D67D3;
       }
+             .sysinfocard {
+               margin-left: 40px;
+             }
+                         .cardswidthSDY {
+                           width: 120%;
+            
+                         }
 }
 
 @media only screen and (max-width: 992px) {
   .cardswidthSDY {
     width: 100%;
     border: none;
-    margin: 1rem;
+    /* margin: 1rem; */
+
   }
+   
+  /* .smallscreencardsys{
+    margin-top: 120px;
+    margin-left: 20px;
+  } */
 
 }
 
+
 .SDScards{
     margin-top: 80px;
-      width: 100%;
+      /* width: 100%; */
       /* background-color: #2D67D3; */
-      height: 300px;
+      /* height: 300px; */
         color: white;
+}
+
+/* .card01{
+  margin-right: 40px;
+} */
+
+.sysinfocard{
+  border: 1px solid blue;
+ 
+}
+
+.content{
+   border: 1px solid blue;
+}
+
+/* .card01{
+  position: relative;
+  
+} */
+.smcard{
+  margin-top: 100px;
+}
+
+.header{
+   box-shadow: 3px  1px silver;
+}
+
+.GauracSenInstructor{
+  width: 250px;
 }

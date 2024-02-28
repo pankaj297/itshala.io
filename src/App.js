@@ -10,6 +10,8 @@ import Blog from './components/blog';
 import Faqs from './components/faqs';
 import Comments from './components/comments';
 import Systemdesign from './components/systemdesign';
+import DataStructure from './components/datastructure';
+import Behavioural from './components/Behavioural';
 
 import { BrowserRouter , Routes, Route} from "react-router-dom";
 
@@ -27,6 +29,8 @@ function App() {
         <Route path="/faqs" element={ <Faqs />} />
         <Route path="/comments" element={ <Comments /> }/>
         <Route path="/systemdesign" element={ <Systemdesign />} />
+        <Route path="/dataStructure" element={ <DataStructure />} />
+        <Route path="/Behavioural" element={ <Behavioural />}  />
        </Routes>   
     </BrowserRouter>
   );

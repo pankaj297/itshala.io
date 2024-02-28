@@ -1,35 +1,32 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
-import Content from './coursecontent';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Content from "./coursecontent";
 // import Comments from './comments';
-import Data from './Api';
-import Footer from './Footer';
-import QData2 from './Qestiondata2';
+import Data from "./Api";
+import Footer from "./Footer";
+import QData2 from "./Qestiondata2";
 
-function Systemdesign() {
-   const [apiData] = useState(Data);
-   const [contentdata, ] = useState(Content);
+function DataStructure() {
+  const [apiData] = useState(Data);
+  const [contentdata] = useState(Content);
 
-    // strict equality operator
+  // strict equality operator
 
-   const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(null);
 
-   const handleButtonClick = (cardId) => {
-     setExpandedCard(expandedCard === cardId ? null : cardId);
-   };
+  const handleButtonClick = (cardId) => {
+    setExpandedCard(expandedCard === cardId ? null : cardId);
+  };
 
+  const [rowData2] = useState(QData2);
 
+  //  strict equality operator
 
-    const [rowData2] = useState(QData2);
+  const [expandedCard2, setExpandedCard2] = useState(null);
 
-    //  strict equality operator
-
-    const [expandedCard2, setExpandedCard2] = useState(null);
-
-    const handleButtonClick2 = (cardId2) => {
-      setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
-    };
-
+  const handleButtonClick2 = (cardId2) => {
+    setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
+  };
 
   return (
     <>
@@ -38,7 +35,7 @@ function Systemdesign() {
         <nav className="navbar  navbar-expand-md">
           <div className="container-fluid togglebt">
             <button
-              className="ms-3  bg-body-tertiary    fs-2 border-0 d-block d-md-none"
+              className="ms-3 bg-body-tertiary   fs-2 border-0 d-block d-md-none"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -103,7 +100,7 @@ function Systemdesign() {
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="/dataStructure">
+                        <a className="dropdown-item" href="/datastructures">
                           Data Structures & Algorithms
                         </a>
                       </li>
@@ -162,7 +159,7 @@ function Systemdesign() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/dataStructure" className="dropdown-item">
+                    <Link to="/datastructures" className="dropdown-item">
                       Data Structures & Algorithms
                     </Link>
                   </li>
@@ -207,17 +204,15 @@ function Systemdesign() {
         <div className="course1 d-flex">
           <div className="SDSblue p-4 col-lg-8">
             <div className=" mx-5 pb-5 d-none d-lg-block ">
-              <h1 className=" fw-bolder  mt-4 ">System Design Simplified</h1>
+              <h1 className=" fw-bolder  mt-4 ">
+                Data Structures & Algorithms
+              </h1>
               <p className=" fw-medium  fs-5">
-                An A-Z video course on system design patterns and best
-                practices. This course ranges from basic concepts like routing,
-                load balancing and caching to advanced concepts like
-                concurrency, separation of concerns, and design tradeoffs.
-              </p>
-              <p className="fs-5">
-                <i className="bi bi-people-fill fs-4 "></i> 19022+ Students
-                <i className="bi bi-chat-right-text-fill fs-5 mx-4  me-2 "></i>
-                Last updated on 02/2024
+                A rapid ramp-up on the fundamentals of data structures and
+                algorithms applied to interviews. Learn repeatable
+                problem-solving patterns for finding, analyzing, & refining
+                solutions. Additionally, gain a rock-solid foundation in all
+                interview data structures.
               </p>
             </div>
           </div>
@@ -226,32 +221,24 @@ function Systemdesign() {
 
       <div className="row row-cols-1 container-fluid   row-cols-lg-2  ">
         {/* ------------small screen card---- */}
-        <div className="card01 smcard d-block d-lg-none ms-4">
+        <div className=" smcard d-block d-lg-none ms-2">
           <div className="card  cardswidthSDY border-1 border-primary    CourseCard ">
             <video
-              className="img-fluid m-2  rounded-2 "
-              poster="img/thumbnailFvideo.png"
+              className="img-fluid  rounded-2 "
+              poster="img/cardphoto2.jpeg"
               controls
               src="img/Intro.mp4"
             ></video>
             <div className="card-body">
-              <h5 className="card-title fw-bold d-block d-lg-none fs-2">
-                System Design Simplified
+              <h5 className="card-title fw-bold d-block d-lg-none fs-3">
+                Data Structures & Algorithms
               </h5>
-              <div className=" d-flex gap-3 fw-bold d-block d-lg-none">
-                <p>
-                  <i className="bi bi-star-fill text-warning me-2 "></i>4.48
-                  (9887)
-                </p>
-                <p>
-                  <i className="bi bi-people-fill"></i> 19153+ Students
-                </p>
-              </div>
               <p className="card-text  d-block d-lg-none">
-                An A-Z video course on system design patterns and best
-                practices. This course ranges from basic concepts like routing,
-                load balancing and caching to advanced concepts like
-                concurrency, separation of concerns, and design tradeoffs.
+                A rapid ramp-up on the fundamentals of data structures and
+                algorithms applied to interviews. Learn repeatable
+                problem-solving patterns for finding, analyzing, & refining
+                solutions. Additionally, gain a rock-solid foundation in all
+                interview data structures.
               </p>
             </div>
             <div className="ms-3">
@@ -263,10 +250,10 @@ function Systemdesign() {
                   <y className="text-dark ">Buy for</y> 70% OFF
                 </b>
               </a>
-              <p className="text-dark   fw-bold fs-4">
-                ₹7,995.00{" "}
-                <y className="fw-lighter text-secondary text-decoration-line-through">
-                  ₹15,990.00
+              <p className="text-dark    fw-bold fs-4">
+                ₹3,894.00
+                <y className="fw-lighter ms-3 text-secondary text-decoration-line-through">
+                  ₹12,980.00
                 </y>
               </p>
             </div>
@@ -278,45 +265,33 @@ function Systemdesign() {
                 >
                   Buy Now
                 </button>
-                <button
-                  className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "
-                  type="button"
-                >
-                  Try for Free
-                </button>
               </div>
             </div>
             <div className=" mt-3 fw-bold text-body-secondary ">
               <p className="ms-4 fs-5">This course includes:</p>
               <ul className="list-group-item ms-4 list-group-flush">
                 <li className="list-group-item">
-                  <i className="bi bi-camera-video text-primary pe-2"></i>
-                  285+ Video Lessons
+                  <i className="bi bi-camera-video  text-primary  pe-2"></i>
+                  150+ Video Lessons
                 </li>
 
-                <li className="list-group-item mt-2">
-                  <i className="bi bi-file-text text-primary pe-2"></i>44+
-                  Quizzes
+                <li class="list-group-item mt-2">
+                  <i class="bi bi-file-earmark-code  text-primary   pe-2 "></i>
+                  Full Coding Environment
                 </li>
 
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
-                  64+ Downloadable Resources
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
+                  Optimal Solutions
                 </li>
 
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-person-video text-primary pe-2"></i>Live
-                  Classes
-                </li>
-
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-file-medical text-primary pe-2"></i>
-                  Interview Questions
-                </li>
-
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-clock text-primary pe-2"></i>Continuous
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-clock  text-primary   pe-2"></i>Continuous
                   Updates
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-alexa  text-primary   pe-2 "></i>AI Assistant
                 </li>
 
                 <li className="list-group-item pt-2">
@@ -351,41 +326,35 @@ function Systemdesign() {
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Learn system design fundamentals: eventual consistency,
-                  routing, caching, etc.
+                  Learn all of the core data structures used in interviews.
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Design large-scale distributed systems with microservices.
+                  Learn key interview algorithms & how to identify their
+                  use-cases.
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Convert requirements into high-level system designs.
+                  Gain a deep understanding of analyzing & incrementally
+                  refining your solutions.
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Identify and address design tradeoffs and single points of
-                  failure.
+                  Gain core framework for approaching & breaking-down any
+                  interview problem (even those you have never seen before).
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Convert engineering requirements into low-level coding and
-                  design.
-                </p>
-              </div>
-              <div className="col-lg-5 d-flex ">
-                <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
-                <p className="">
-                  Account for concurrency, request ordering, and async
-                  processing.
+                  Gain a rock-solid grasp of trickier topics like recursion,
+                  dynamic programming, graphs, & more.
                 </p>
               </div>
             </div>
@@ -416,47 +385,28 @@ function Systemdesign() {
               );
             })}
           </div>
-          {/* --------------Live classes---------- */}
-          <div className="Liveclass my-4 py-3  p-lg-3  rounded-3  mx-3 mx-md-5 text-center ">
-            <h3 className="LiveClasses mt-md-4 fs-2 fw-bolder  text-primary ">
-              Live Classes
-            </h3>
-            <h5 className="livetext text-center text-secondary-emphasis">
-              Watch Gaurav resolve doubts for enrolled users
-            </h5>
-            <div className="">
-              <video
-                className="img-fluid video2      rounded-2 "
-                poster="img/thumbnailFvideo.png"
-                controls
-                src="img/Intro.mp4"
-              ></video>
-            </div>
-          </div>
-          <h2 className=" ms-lg-5  text-sm-center text-center  fw-bold  ">
+          <h2 className=" ms-lg-5 mt-4  text-sm-center text-center  fw-bold  ">
             Meet Your Instructor
           </h2>
           <div className="d-flex row row-cols-1 row-cols-lg-2">
             <div className="col-lg-4 col-12 text-center">
               <img
-                src="img/GauracSenInstructor.webp"
+                src="img/roundcardphoto2.jpeg"
                 className="GauracSenInstructor  rounded-circle  "
                 alt="img"
               />
             </div>
 
             <div className="mt-3 text-center  text-sm-center  col-lg-7 col-12">
-              <h3>Gaurav Sen</h3>
-              <p> Ex Software Engineer @ Uber, Directi</p>
+              <h3>Benyam Ephrem</h3>
+              <p> Ex Software Engineer @ Twitter</p>
               <p>
                 {" "}
-                Meet Gaurav, founder, and CEO of InterviewReady. He has a
-                background in distributed systems and software engineering at
-                Uber, DirectI, and Morgan Stanley. He is an expert at designing
-                scalable systems, and has over 500k+ followers on his YouTube
-                channel. Gaurav has spoken about distributed systems at various
-                institutions like University of Houston-Texas, IIT Gandhinagar,
-                and BITS Hyderabad.
+                Benyam Ephrem was previously founder of Back to Back SWE, where
+                he grew a YouTube channel teaching Data Structures & Algorithms
+                to 200,000+ subscribers. Ben has taught over 400+ video lessons
+                on DS/A. Formerly an engineer on the twitter.com team, today he
+                runs interviewpen.com full-time.
               </p>
               <div className=" d-flex fs-3 ">
                 <i class="bi bi-linkedin "></i>
@@ -503,23 +453,14 @@ function Systemdesign() {
           <div className="card   cardswidthSDY border-1 border-primary    CourseCard ">
             <video
               className="img-fluid m-2  rounded-2 "
-              poster="img/thumbnailFvideo.png"
+              poster="img/cardphoto2.jpeg"
               controls
               src="img/Intro.mp4"
             ></video>
             <div className="card-body">
               <h5 className="card-title fw-bold d-block d-lg-none fs-2">
-                System Design Simplified
+                Data Structures & Algorithms
               </h5>
-              <div className=" d-flex gap-3 fw-bold d-block d-lg-none">
-                <p>
-                  <i className="bi bi-star-fill text-warning me-2 "></i>4.48
-                  (9887)
-                </p>
-                <p>
-                  <i className="bi bi-people-fill"></i> 19153+ Students
-                </p>
-              </div>
               <p className="card-text  d-block d-lg-none">
                 An A-Z video course on system design patterns and best
                 practices. This course ranges from basic concepts like routing,
@@ -537,9 +478,9 @@ function Systemdesign() {
                 </b>
               </a>
               <p className="text-dark   fw-bold fs-4">
-                ₹7,995.00{" "}
+                ₹3,894.00
                 <y className="fw-lighter text-secondary text-decoration-line-through">
-                  ₹15,990.00
+                  ₹12,980.00
                 </y>
               </p>
             </div>
@@ -551,45 +492,33 @@ function Systemdesign() {
                 >
                   Buy Now
                 </button>
-                <button
-                  className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "
-                  type="button"
-                >
-                  Try for Free
-                </button>
               </div>
             </div>
             <div className=" mt-3 fw-bold text-body-secondary ">
               <p className="ms-4 fs-5">This course includes:</p>
               <ul className="list-group-item ms-4 list-group-flush">
                 <li className="list-group-item">
-                  <i className="bi bi-camera-video text-primary pe-2"></i>
-                  285+ Video Lessons
+                  <i className="bi bi-camera-video  text-primary  pe-2"></i>
+                  150+ Video Lessons
                 </li>
 
-                <li className="list-group-item mt-2">
-                  <i className="bi bi-file-text text-primary pe-2"></i>44+
-                  Quizzes
+                <li class="list-group-item mt-2">
+                  <i class="bi bi-file-earmark-code  text-primary   pe-2 "></i>
+                  Full Coding Environment
                 </li>
 
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
-                  64+ Downloadable Resources
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
+                  Optimal Solutions
                 </li>
 
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-person-video text-primary pe-2"></i>Live
-                  Classes
-                </li>
-
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-file-medical text-primary pe-2"></i>
-                  Interview Questions
-                </li>
-
-                <li className="list-group-item pt-2">
-                  <i className="bi bi-clock text-primary pe-2"></i>Continuous
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-clock  text-primary   pe-2"></i>Continuous
                   Updates
+                </li>
+
+                <li class="list-group-item pt-2">
+                  <i class="bi bi-alexa  text-primary   pe-2 "></i>AI Assistant
                 </li>
 
                 <li className="list-group-item pt-2">
@@ -693,12 +622,4 @@ function Systemdesign() {
   );
 }
 
-export default Systemdesign;
-
-
-
-
-
-
- 
-
+export default DataStructure;

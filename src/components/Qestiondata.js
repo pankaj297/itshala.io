@@ -21,7 +21,7 @@ const QData = [
     id: 4,
     curText: "What will happen at the end of this course?",
     HidenText:
-      "1. Clear software interview rounds 2.  Gain workplace capabilities 3. Add more value in team discussions and reviews.",
+    "1. Clear software interview rounds 2.   Gain workplace capabilities 3. Add more value in team discussions and reviews.",
   },
   {
     id: 5,

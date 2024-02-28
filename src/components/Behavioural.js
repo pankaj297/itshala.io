@@ -1,35 +1,32 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
-import Content from './coursecontent';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Content from "./coursecontent";
 // import Comments from './comments';
-import Data from './Api';
-import Footer from './Footer';
-import QData2 from './Qestiondata2';
+import Data from "./Api";
+import Footer from "./Footer";
+import QData2 from "./Qestiondata2";
 
-function Systemdesign() {
-   const [apiData] = useState(Data);
-   const [contentdata, ] = useState(Content);
+function Behavioural() {
+  const [apiData] = useState(Data);
+  const [contentdata] = useState(Content);
 
-    // strict equality operator
+  // strict equality operator
 
-   const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(null);
 
-   const handleButtonClick = (cardId) => {
-     setExpandedCard(expandedCard === cardId ? null : cardId);
-   };
+  const handleButtonClick = (cardId) => {
+    setExpandedCard(expandedCard === cardId ? null : cardId);
+  };
 
+  const [rowData2] = useState(QData2);
 
+  //  strict equality operator
 
-    const [rowData2] = useState(QData2);
+  const [expandedCard2, setExpandedCard2] = useState(null);
 
-    //  strict equality operator
-
-    const [expandedCard2, setExpandedCard2] = useState(null);
-
-    const handleButtonClick2 = (cardId2) => {
-      setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
-    };
-
+  const handleButtonClick2 = (cardId2) => {
+    setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
+  };
 
   return (
     <>
@@ -207,17 +204,17 @@ function Systemdesign() {
         <div className="course1 d-flex">
           <div className="SDSblue p-4 col-lg-8">
             <div className=" mx-5 pb-5 d-none d-lg-block ">
-              <h1 className=" fw-bolder  mt-4 ">System Design Simplified</h1>
+              <h1 className=" fw-bolder  mt-4 ">Behavioural Interviews</h1>
               <p className=" fw-medium  fs-5">
-                An A-Z video course on system design patterns and best
-                practices. This course ranges from basic concepts like routing,
-                load balancing and caching to advanced concepts like
-                concurrency, separation of concerns, and design tradeoffs.
+                This course is for professionals with 0 to 10 years of
+                experience who is applying for a job and looking to ace their
+                behavioral interviews. The facilitator, Dr. Ashis Sen, is a
+                subject matter expert on competency-based interviewing.
               </p>
               <p className="fs-5">
-                <i className="bi bi-people-fill fs-4 "></i> 19022+ Students
+                <i className="bi bi-people-fill fs-4 "></i> 1670+ Student
                 <i className="bi bi-chat-right-text-fill fs-5 mx-4  me-2 "></i>
-                Last updated on 02/2024
+                Last updated on 03/2023
               </p>
             </div>
           </div>
@@ -230,28 +227,31 @@ function Systemdesign() {
           <div className="card  cardswidthSDY border-1 border-primary    CourseCard ">
             <video
               className="img-fluid m-2  rounded-2 "
-              poster="img/thumbnailFvideo.png"
+              poster="img/cardphoto3.jpeg"
               controls
               src="img/Intro.mp4"
             ></video>
             <div className="card-body">
               <h5 className="card-title fw-bold d-block d-lg-none fs-2">
-                System Design Simplified
+                Behavioural Interviews
               </h5>
               <div className=" d-flex gap-3 fw-bold d-block d-lg-none">
                 <p>
-                  <i className="bi bi-star-fill text-warning me-2 "></i>4.48
+                  <i className="bi bi-star-fill text-warning me-2 "></i>4.77
                   (9887)
                 </p>
                 <p>
-                  <i className="bi bi-people-fill"></i> 19153+ Students
+                  <i className="bi bi-people-fill"></i> 1670+ Students
+                </p>
+                <p>
+                  <i className="bi bi-people-fill"></i> Last updated 03/2023
                 </p>
               </div>
               <p className="card-text  d-block d-lg-none">
-                An A-Z video course on system design patterns and best
-                practices. This course ranges from basic concepts like routing,
-                load balancing and caching to advanced concepts like
-                concurrency, separation of concerns, and design tradeoffs.
+                This course is for professionals with 0 to 10 years of
+                experience who is applying for a job and looking to ace their
+                behavioral interviews. The facilitator, Dr. Ashis Sen, is a
+                subject matter expert on competency-based interviewing.
               </p>
             </div>
             <div className="ms-3">
@@ -264,9 +264,9 @@ function Systemdesign() {
                 </b>
               </a>
               <p className="text-dark   fw-bold fs-4">
-                ₹7,995.00{" "}
+                ₹1,197.00
                 <y className="fw-lighter text-secondary text-decoration-line-through">
-                  ₹15,990.00
+                  ₹3,990.00
                 </y>
               </p>
             </div>
@@ -291,17 +291,17 @@ function Systemdesign() {
               <ul className="list-group-item ms-4 list-group-flush">
                 <li className="list-group-item">
                   <i className="bi bi-camera-video text-primary pe-2"></i>
-                  285+ Video Lessons
+                  13+ Video Lessons
                 </li>
 
                 <li className="list-group-item mt-2">
-                  <i className="bi bi-file-text text-primary pe-2"></i>44+
+                  <i className="bi bi-file-text text-primary pe-2"></i>5+
                   Quizzes
                 </li>
 
                 <li className="list-group-item pt-2">
                   <i className="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
-                  64+ Downloadable Resources
+                  5+ Downloadable Resources
                 </li>
 
                 <li className="list-group-item pt-2">
@@ -351,41 +351,40 @@ function Systemdesign() {
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Learn system design fundamentals: eventual consistency,
-                  routing, caching, etc.
+                  Understand the ideal candidate qualities interviewers seek
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Design large-scale distributed systems with microservices.
+                  Articulate your experiences effectively for mapping
+                  competencies
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Convert requirements into high-level system designs.
+                  Master the structured behavioral interview technique,
+                  including STAR pattern
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Identify and address design tradeoffs and single points of
-                  failure.
+                  Discover the benefits and drawbacks of STAR method
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Convert engineering requirements into low-level coding and
-                  design.
+                  Present data and details to showcase competencies
                 </p>
               </div>
               <div className="col-lg-5 d-flex ">
                 <i className="bi bi-check2 m-2 fs-4 text-primary "></i>
                 <p className="">
-                  Account for concurrency, request ordering, and async
-                  processing.
+                  See how leadership and ownership competencies are assessed in
+                  a sample interview.
                 </p>
               </div>
             </div>
@@ -417,46 +416,26 @@ function Systemdesign() {
             })}
           </div>
           {/* --------------Live classes---------- */}
-          <div className="Liveclass my-4 py-3  p-lg-3  rounded-3  mx-3 mx-md-5 text-center ">
-            <h3 className="LiveClasses mt-md-4 fs-2 fw-bolder  text-primary ">
-              Live Classes
-            </h3>
-            <h5 className="livetext text-center text-secondary-emphasis">
-              Watch Gaurav resolve doubts for enrolled users
-            </h5>
-            <div className="">
-              <video
-                className="img-fluid video2      rounded-2 "
-                poster="img/thumbnailFvideo.png"
-                controls
-                src="img/Intro.mp4"
-              ></video>
-            </div>
-          </div>
-          <h2 className=" ms-lg-5  text-sm-center text-center  fw-bold  ">
+          <h2 className=" ms-lg-5 mt-3  text-sm-center text-center  fw-bold  ">
             Meet Your Instructor
           </h2>
           <div className="d-flex row row-cols-1 row-cols-lg-2">
             <div className="col-lg-4 col-12 text-center">
               <img
-                src="img/GauracSenInstructor.webp"
+                src="img/roundcardphoto3.jpeg"
                 className="GauracSenInstructor  rounded-circle  "
                 alt="img"
               />
             </div>
 
             <div className="mt-3 text-center  text-sm-center  col-lg-7 col-12">
-              <h3>Gaurav Sen</h3>
-              <p> Ex Software Engineer @ Uber, Directi</p>
+              <h3>Ashis Sen</h3>
+              <p>Executive Coach, Adjunct Professor IIM Nagpur (HRM & OB)</p>
               <p>
-                {" "}
-                Meet Gaurav, founder, and CEO of InterviewReady. He has a
-                background in distributed systems and software engineering at
-                Uber, DirectI, and Morgan Stanley. He is an expert at designing
-                scalable systems, and has over 500k+ followers on his YouTube
-                channel. Gaurav has spoken about distributed systems at various
-                institutions like University of Houston-Texas, IIT Gandhinagar,
-                and BITS Hyderabad.
+                Dr. Ashis Sen is a subject matter expert on behavioural
+                interviews and competency assessment. He is a visiting faculty
+                at IIM Nagpur, and has been a guest lecturer at top management
+                institutes like IIM-Lucknow, NMIMS, and TISS.
               </p>
               <div className=" d-flex fs-3 ">
                 <i class="bi bi-linkedin "></i>
@@ -503,7 +482,7 @@ function Systemdesign() {
           <div className="card   cardswidthSDY border-1 border-primary    CourseCard ">
             <video
               className="img-fluid m-2  rounded-2 "
-              poster="img/thumbnailFvideo.png"
+              poster="img/cardphoto3.jpeg"
               controls
               src="img/Intro.mp4"
             ></video>
@@ -537,9 +516,9 @@ function Systemdesign() {
                 </b>
               </a>
               <p className="text-dark   fw-bold fs-4">
-                ₹7,995.00{" "}
+                ₹1,197.00
                 <y className="fw-lighter text-secondary text-decoration-line-through">
-                  ₹15,990.00
+                  ₹3,990.00
                 </y>
               </p>
             </div>
@@ -564,17 +543,17 @@ function Systemdesign() {
               <ul className="list-group-item ms-4 list-group-flush">
                 <li className="list-group-item">
                   <i className="bi bi-camera-video text-primary pe-2"></i>
-                  285+ Video Lessons
+                  13+ Video Lessons
                 </li>
 
                 <li className="list-group-item mt-2">
-                  <i className="bi bi-file-text text-primary pe-2"></i>44+
+                  <i className="bi bi-file-text text-primary pe-2"></i>5+
                   Quizzes
                 </li>
 
                 <li className="list-group-item pt-2">
                   <i className="bi bi-file-earmark-arrow-down text-primary pe-2"></i>
-                  64+ Downloadable Resources
+                  5+ Downloadable Resources
                 </li>
 
                 <li className="list-group-item pt-2">
@@ -693,12 +672,4 @@ function Systemdesign() {
   );
 }
 
-export default Systemdesign;
-
-
-
-
-
-
- 
-
+export default Behavioural;

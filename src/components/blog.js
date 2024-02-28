@@ -9,11 +9,11 @@ function Blog() {
 
   return (
     <>
-      <div className="header bg-body-secondary  fixed-top">
+      <div className="header  bg-body-tertiary  fixed-top">
         <nav className="navbar  navbar-expand-md">
           <div className="container-fluid togglebt">
             <button
-              className="ms-3 bg-body-secondary  fs-2 border-0 d-block d-md-none"
+              className="ms-3  bg-body-tertiary   fs-2 border-0 d-block d-md-none"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -78,12 +78,12 @@ function Blog() {
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="_blank">
+                        <a className="dropdown-item" href="/dataStructure">
                           Data Structures & Algorithms
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="_blank">
+                        <a className="dropdown-item" href="/Behavioural">
                           Behavioural Interviews
                         </a>
                       </li>
@@ -137,14 +137,14 @@ function Blog() {
                     </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="_blank">
+                    <Link to="/dataStructure" className="dropdown-item">
                       Data Structures & Algorithms
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="_blank">
+                    <Link className="dropdown-item" href="/Behavioural">
                       Behavioural Interviews
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -268,7 +268,6 @@ function Blog() {
                       <div className="">
                         <img
                           src={image}
-                    
                           className="img-fluid float-start  rounded-start-circle rounded-end-circle  col-3"
                           alt="img"
                         />
