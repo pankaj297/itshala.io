@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import Data from './Api';
-import Faqs from './faqs';
+
 
 
 function Comments() {
@@ -60,7 +60,7 @@ function Comments() {
           })}
         </div>
       </div>
-      <Faqs />
+      
     </>
   );
 }

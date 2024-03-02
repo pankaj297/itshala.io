@@ -1,18 +1,37 @@
 
 import React from "react";
-import Home from "./home";
 import { Link } from "react-router-dom";
 
 
 function Header() {
 
+  function blogbtn (){
+    window.location = "/blog"
+  }
+
+  function systemDS() {
+    window.location = "/systemdesign";
+  }
+
+  function dataSA(){
+    window.location = "/dataStructure";
+  }
+  function behavIner(){
+    window.location = "/Behavioural";
+  }
+  function faqs() {
+    window.location = "/faqs";
+  }
+  function testimonials(){
+    window.location = "/comments";
+  }
   return (
     <>
       <div className="header bg-body-tertiary   fixed-top">
         <nav className="navbar  navbar-expand-md">
           <div className="container-fluid togglebt">
             <button
-              className="ms-3  bg-body-tertiary  fs-2 border-0 d-block d-md-none"
+              className="ms-2 bg-body-tertiary  fs-2 border-0 d-block d-md-none"
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasNavbar"
@@ -22,7 +41,7 @@ function Header() {
               <i className="bi bi-grid"></i>
             </button>
 
-            <a className="m-3 d-none d-md-block" href="/">
+            <a className="m-2 d-none d-md-block" href="/">
               <img src="img/TitleLogo.png" alt="logo" height={35} />
             </a>
 
@@ -71,43 +90,47 @@ function Header() {
                     <ul className="dropdown-menu fs-4">
                       {/* -----------------Toggle button react routing error ---------------- */}
                       <li>
-                        <a className="dropdown-item" href="/systemdesign">
+                        <button onClick={systemDS} className="dropdown-item">
                           System Design Simplified
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="/dataStructure">
+                        <button onClick={dataSA} className="dropdown-item">
                           Data Structures & Algorithms
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="/Behavioural">
+                        <button onClick={behavIner} className="dropdown-item">
                           Behavioural Interviews
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item d-block d-md-none ">
-                    <a
-                      href="/blog"
+                    <button
+                      onClick={blogbtn}
                       className="nav-link pointer-event  active fs-3 fw-bold"
                     >
                       Blog
-                    </a>
+                    </button>
                   </li>
                   <li className="nav-item d-block d-md-none fs-3 fw-bold">
-                    <a className="nav-link active" aria-current="page" href="/">
+                    <button
+                      onClick={faqs}
+                      className="nav-link active"
+                      aria-current="page"
+                    >
                       FAQs
-                    </a>
+                    </button>
                   </li>
                   <li className="nav-item  d-block d-md-none">
-                    <a
+                    <button
+                      onClick={testimonials}
                       className="nav-link active fs-3 fw-bold"
                       aria-current="page"
-                      href="/"
                     >
                       Testimonials
-                    </a>
+                    </button>
                   </li>
                   {/* -----------------Toggle button react routing error ---------------- */}
                 </ul>
@@ -147,7 +170,7 @@ function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item  fw-bolder list-unstyled pt-2  m-2 me-0">
+              <li className="nav-item  fw-bolder list-unstyled pt-2  m-2 me-0 d-none d-md-block ">
                 <Link to="/blog" className="nav-link  pointer-event  active">
                   Blog
                 </Link>
@@ -175,10 +198,6 @@ function Header() {
             </ul>
           </div>
         </nav>
-      </div>
-
-      <div className="content">
-        <Home />
       </div>
     </>
   );

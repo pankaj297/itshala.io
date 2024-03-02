@@ -270,3 +270,28 @@ body{
 .GauracSenInstructor{
   width: 250px;
 }
+
+/* .WhatApp{
+  position: fixed;
+  right: 30px;
+  
+} */
+
+.whats-app {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 15px;
+  background-color: #00ff5e;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 40px;
+  box-shadow: 2px 3px 5px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}

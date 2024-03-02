@@ -1,15 +1,39 @@
 import React, { useState } from 'react'
 import Data from "./Api";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 function Varification() {
 
       const [apiData] = useState(Data);
 
-      function verification(){
-         alert("🎉🍾🎊Two Step Varification Successfully 🎉🍾🎊");
-      }
+      // function verification(){
+      //    alert("🎉🍾🎊Two Step Varification Successfully 🎉🍾🎊");
+      // }
+
+
+      const [formValidity, setFormValidity] = useState({
+        number: false,
+
+      });
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (formValidity.number) {
+          alert("🎉🍾🎊verificaton Successfully 🎉🍾🎊");
+          window.location = "/";
+        } else {
+          alert("Please fill in the required fields.");
+        }
+      };
+
+      const [counter, setCounter] = useState(59);
+
+      React.useEffect (() => {
+        const timer = counter > 0 && setInterval(() => setCounter(counter -1), 1000);
+        return() => clearInterval(timer);
+      }, [counter]);
 
   return (
     <>
@@ -76,10 +100,10 @@ function Varification() {
             <div className=" text-center">
               <div className="d-block d-md-none mt-5 fs-3   text-center">
                 <a className="m-3 " href="_blank">
-                  <i className="bi bi-mortarboard-fill fs-2 text-success"></i>
+                  <i className="bi bi-mortarboard-fill fs-2 text-primary"></i>
                 </a>
                 <a className="navbar-brand " href="_blank">
-                  <b>INTERVIEW</b> <b className="m-2 text-success">READY</b>
+                  <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
                 </a>
               </div>
               <div className="mt-5">
@@ -118,75 +142,48 @@ function Varification() {
                   ------------
                 </p>
               </div>
-
-              <div class="otp_input  m-5 m-md-5 w-75 text-start mb-2">
-                <label for="digit" className="veri  ">
-                  Type your 6 digit security code
-                </label>
-                <div class="d-flex veri   align-items-center text-center  justify-content-between  mt-2 ">
+              <form
+                onSubmit={handleSubmit}
+                className="d-flex justify-content-center row row-cols-1 "
+              >
+                <div className="form-floating   text-secondary  bod border-5 col-10  col-lg-7 mb-3">
                   <input
-                    type="tel"
-                    tabindex="1"
-                    maxLength={1}
-                    class="form-control p-3 m-1 "
-                    placeholder=""
-                    autoComplete="off"
+                    type="number"
+                    className="form-control"
+                    id="floatingInput"
+                    placeholder="Enter 6 Digit OTP"
+                    required
+                    minLength="6"
+                    onBlur={(e) =>
+                      setFormValidity({
+                        ...formValidity,
+                        number: e.target.checkValidity(),
+                      })
+                    }
                   />
-                  <input
-                    type="tel"
-                    maxLength={1}
-                    tabindex="2"
-                    class="form-control p-3 m-1 "
-                    placeholder=""
-                    autoComplete="off"
-                  />
-                  <input
-                    type="tel"
-                    maxLength={1}
-                    tabindex="3"
-                    class="form-control p-3 m-1 "
-                    placeholder=""
-                    autoComplete="off"
-                  />
-                  <input
-                    type="tel"
-                    maxLength={1}
-                    tabindex="4"
-                    class="form-control p-3 m-1"
-                    placeholder=""
-                    autoComplete="off"
-                  />
-                  <input
-                    type="tel"
-                    maxLength={1}
-                    tabindex="5"
-                    class="form-control p-3 m-1"
-                    placeholder=""
-                    autoComplete="off"
-                  />
-                  <input
-                    type="tel"
-                    maxLength={1}
-                    tabindex="6"
-                    class="form-control p-3 m-1"
-                    placeholder=""
-                    autoComplete="off"
-                  />
-                </div>
-              </div>
-
-              <div className="d-flex justify-content-center row row-cols-1">
-                <div className="">
-                  <Link
-                    to="/"
-                    onClick={() => verification()}
-                    className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
-                    type="button"
+                  <label
+                    for="floatingInput"
+                    className="form-label  was-validated "
                   >
-                    Submit
-                  </Link>
+                    Enter 6 Digit OTP
+                  </label>
                 </div>
-              </div>
+                <p className=" text-primary ">
+                  Resend Otp in{" "}
+                  <span className=" fw-bold "> 00: {counter}</span>
+                </p>
+                <div className="d-flex justify-content-center row row-cols-1">
+                  <div className="">
+                    <button
+                      // onClick={() => verification()}
+                      className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

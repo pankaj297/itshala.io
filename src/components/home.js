@@ -1,9 +1,5 @@
 import React from 'react';
-import Course from './Course';
-import Smallcard from './Smallcard';
-import Whatsets from './Whatsets';
-import Comments from './comments';
-import Footer from './Footer';
+
 
 
 function Home() {
@@ -21,8 +17,8 @@ function Home() {
                 <h4 className="fw-bold">& Get your dream job</h4>
                 <p className="card-text mt-3 fs-6">
                   Learn how to design large-scale distributed systems, implement
-                  coding design patterns  and make tradeoffs on
-                  consistency, availability and performance.
+                  coding design patterns and make tradeoffs on consistency,
+                  availability and performance.
                 </p>
                 <p className="card-text mt-5 ">
                   <a href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer">
@@ -55,8 +51,11 @@ function Home() {
             </p>
             {/* ---------Logo Hoem Section---- */}
             <div data-v-44b84478="" class="company-stats">
-              <div data-v-44b84478="" class="company-logos row  row-cols-2 row-cols-sm-3   row-cols-md-4 row-cols-lg-6  " >
-                <div data-v-44b84478="" >
+              <div
+                data-v-44b84478=""
+                class="company-logos row  row-cols-2 row-cols-sm-3   row-cols-md-4 row-cols-lg-6  "
+              >
+                <div data-v-44b84478="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 603.9 129"
@@ -158,24 +157,20 @@ function Home() {
                 </div>
               </div>
             </div>
+            {/* <div className="WhatApp ">
+              <button className="border-4 border-primary px-lg-3 py-lg-2 px-3 py-2  rounded-5  float-end bg-white ">
+                <i class="bi bi-whatsapp  text-success fs-1 "></i>
+              </button>
+            </div> */}
+            <a
+              className="whats-app"
+              href="https://api.whatsapp.com/send/?phone=917276028036&text&type=phone_number&app_absent=0"
+            >
+              <i className="bi bi-whatsapp my-float"></i>
+            </a>
             {/* -------Logo Hoem Section-------- */}
           </div>
         </div>
-      </div>
-      <div className="Course">
-        <Course />
-      </div>
-      <div className="Smallcard">
-        <Smallcard />
-      </div>
-      <div className="Whatsets">
-        <Whatsets />
-      </div>
-      <div className="CommentsCards">
-        <Comments />
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </>
   );

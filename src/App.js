@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css";
-import Header from "./components/header";
+import Allcomponents from './components/allcomponents';
 import Sign from './components/sign';
 import Account from './components/account';
 import Forget from './components/forget';
@@ -10,16 +10,20 @@ import Blog from './components/blog';
 import Faqs from './components/faqs';
 import Comments from './components/comments';
 import Systemdesign from './components/systemdesign';
-import DataStructure from './components/datastructure';
 import Behavioural from './components/Behavioural';
+import DataStructure from './components/datastructure';
+
+
 
 import { BrowserRouter , Routes, Route} from "react-router-dom";
 
 function App() {
   return (
+    
     <BrowserRouter>
+    
       <Routes>
-        <Route path="/" element={<Header />} />
+        <Route path="/" element={<Allcomponents />} />
         <Route path="/account" element={<Account />} />
         <Route path="/forget" element={<Forget />} />
         <Route path="/varification" element={<Varification />} />
@@ -31,6 +35,7 @@ function App() {
         <Route path="/systemdesign" element={ <Systemdesign />} />
         <Route path="/dataStructure" element={ <DataStructure />} />
         <Route path="/Behavioural" element={ <Behavioural />}  />
+
        </Routes>   
     </BrowserRouter>
   );

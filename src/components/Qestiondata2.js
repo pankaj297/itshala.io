@@ -28,6 +28,15 @@ const QData2 = [
     HidenText:
       "The videos on high-level design don't need coding experience, but knowledge of coding is necessary for low-level design lessons.",
   },
+
+
 ];
 
+
+
 export default QData2;
+
+
+
+
+

@@ -1,13 +1,21 @@
 import React from 'react';
 
-function Course() {
+function Course() { 
+ 
+   function learnMore1() {
+     window.location = "/systemdesign";
+   }
+
+   function learnMore2() {
+     window.location = "/dataStructure";
+   }
+   function learnMore3() {
+     window.location = "/Behavioural";
+   }
   return (
     <>
       {/* ----------------------------card 1-------------------------------- */}
-      <div
-        id="#cor"
-        className="bgprimay pt-5 m-3 rounded-4"
-      >
+      <div className="bgprimay pt-5 m-3 rounded-4">
         <p className="CardTopTextP fs-5 m-2  text-center">
           Master Every Concept. Every Term. Every Detail
         </p>
@@ -88,12 +96,12 @@ function Course() {
                   ₹15,990.00
                 </y>
               </p>
-              <a
-                href="_blank"
-                class="btn w-100  border-primary  border-2 fw-bold   text-primary  card-link"
+              <button
+                onClick={learnMore1}
+                class="btn w-100  border-primary  border-2 fw-bold   text-primary "
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -168,12 +176,12 @@ function Course() {
                   ₹12,980.00
                 </y>
               </p>
-              <a
-                href="_blank"
+              <button
+                onClick={learnMore2}
                 class="btn w-100 fw-bold border-danger  border-2  text-danger  card-link"
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -251,12 +259,12 @@ function Course() {
                   ₹3,990.00
                 </y>
               </p>
-              <a
-                href="_blank"
-                class="btn w-100  fw-bold   border-info border-2  text-info  card-link"
+              <button
+                onClick={learnMore3}
+                class="btn w-100  fw-bold   border-info border-2  text-info "
               >
                 Learn More <i class="bi bi-arrow-up-right"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>

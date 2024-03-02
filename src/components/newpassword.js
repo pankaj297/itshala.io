@@ -3,7 +3,45 @@ import Data from "./Api";
 import { Link } from "react-router-dom";
 
 function Newpassword() {
+
   const [apiData] = useState(Data);
+
+
+  const [formValidity, setFormValidity] = useState({
+    password: false,
+    newpassword: false,
+  });
+
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      formValidity.password === true &&
+      formValidity.newpassword === true &&
+      document.getElementById("floatingInput").value ===
+        document.getElementById("floatingConfirmPassword").value
+    ) {
+      // alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
+      let rNum1 = (Math.floor(Math.random() * 7 ) ) 
+      let rNum2 = Math.floor(Math.random() * 5); 
+      let rNum3 = Math.floor(Math.random() * 10); 
+      let rNum4 = Math.floor(Math.random() * 8); 
+      let rNum5 = Math.floor(Math.random() * 9); 
+      let rNum6 = Math.floor(Math.random() * 6); 
+
+      alert(" ✅ OTP  🔔 is : " + rNum1 + " " + rNum2 + " " + rNum3 + " " + rNum4 + " " + rNum5 +" " + rNum6);
+      window.location = "/varification";
+    } else {
+      alert("Please fill in the required fields.");
+    }
+  };
+
+  // let  btn1 = document.getElementById('btn1');
+  // btn1.addEventListener("click".handleSubmit);
+
+  // ----------------------------------------------
+  
   return (
     <>
       <div className="sign ">
@@ -69,10 +107,10 @@ function Newpassword() {
             <div className=" text-center">
               <div className="d-block d-md-none mt-5 fs-3   text-center">
                 <a className="m-3 " href="_blank">
-                  <i className="bi bi-mortarboard-fill fs-2 text-success"></i>
+                  <i className="bi bi-mortarboard-fill fs-2 text-primary"></i>
                 </a>
                 <a className="navbar-brand " href="_blank">
-                  <b>INTERVIEW</b> <b className="m-2 text-success">READY</b>
+                  <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
                 </a>
               </div>
               <div className="mt-5">
@@ -117,34 +155,56 @@ function Newpassword() {
                 </p>
               </div>
 
-              <div className="d-flex justify-content-center row row-cols-1">
-                <div className="form-floating fw-bold text-secondary  bod border-5 col-10  col-lg-7 mb-3">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="password"
-                  />
-                  <label for="floatingInput">Password</label>
-                </div>
-                <div className="form-floating fw-bold text-secondary  col-10  col-lg-7 mb-3">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="floatingConfirmPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingConfirmPassword">Confirm Password</label>
-                </div>
+              <div className="">
+                <form  onSubmit={handleSubmit} className="d-flex justify-content-center row row-cols-1">
+                  <div className="form-floating fw-bold text-secondary  bod border-5 col-10  col-lg-7 mb-3">
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="floatingInput"
+                      placeholder="password"
+                      required
+                      minLength="6"
 
-                <div className="">
-                  <Link to="/varification"
-                    className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
-                    type="button"
-                  >
-                    Submit
-                  </Link>
-                </div>
+                      onBlur={(e) =>
+                        setFormValidity({
+                          ...formValidity,
+                          password: e.target.checkValidity(),
+                        })
+                      }
+                    />
+                    <label for="floatingInput">Password</label>
+                  </div>
+                  <div className="form-floating fw-bold text-secondary  col-10  col-lg-7 mb-3">
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="floatingConfirmPassword"
+                      placeholder="Password"
+                      required
+                      minLength="6"
+                      onBlur={(e) =>
+                        setFormValidity({
+                          ...formValidity,
+                          newpassword: e.target.checkValidity(),
+                        })
+                      }
+                    />
+                    <label for="floatingConfirmPassword">
+                      Confirm Password
+                    </label>
+                  </div>
+
+            
+                    <button
+                      id="btn1"
+                      className="btn btn-primary fs-5  w-50  me-3  mt-1 p-3 px-5"
+                      type="submit"
+                    >
+                      Submit
+                    </button>
+                  
+                </form>
               </div>
             </div>
           </div>

@@ -5,11 +5,21 @@ import { Link } from "react-router-dom";
 function Sign() {
   const [apiData] = useState(Data);
 
-  
-      function verification() {
-        alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
-      }
+  const [formValidity, setFormValidity] = useState({
+    email: false,
+    password: false,
+  });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (formValidity.email && formValidity.password) {
+      alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
+      window.location = "/";
+    } else {
+      alert("Please fill in the required fields.");
+    }
+  };
 
   return (
     <>
@@ -76,10 +86,10 @@ function Sign() {
             <div className=" text-center">
               <div className="d-block d-md-none mt-5 fs-3   text-center">
                 <a className="m-3 " href="_blank">
-                  <i className="bi bi-mortarboard-fill fs-2 text-success"></i>
+                  <i className="bi bi-mortarboard-fill fs-2 text-primary"></i>
                 </a>
                 <a className="navbar-brand " href="_blank">
-                  <b>INTERVIEW</b> <b className="m-2 text-success">READY</b>
+                  <b>INTERVIEW</b> <b className="m-2  text-primary ">READY</b>
                 </a>
               </div>
               <div className="mt-5">
@@ -124,39 +134,74 @@ function Sign() {
                 </p>
               </div>
 
-              <div className="d-flex justify-content-center row row-cols-1">
-                <div className="form-floating fw-bold  text-secondary  bod border-5 col-10  col-lg-7 mb-3">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Email address</label>
-                </div>
-                <div className="form-floating fw-bold  text-secondary  bod col-10 col-lg-7 ">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="floatingPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingPassword">Password</label>
-                </div>
-                <p>
-                  <Link to="/forget" className=" float-end  col-6 mt-2 ">
-                    Forget Password
-                  </Link>
-                </p>
-                <Link
-                  to="/"
-                  onClick={() => verification()}
-                  className="btn btn-primary fs-5  col-9 col-lg-6  me-2  mt-1 p-3"
-                  type="button"
+              <div className="">
+                <form
+                  onSubmit={handleSubmit}
+                  className="d-flex justify-content-center row row-cols-1"
                 >
-                  Sign In
-                </Link>
+                  <div className="form-floating fw-bold  text-secondary  bod border-5 col-10  col-lg-7 mb-3">
+                    <input
+                      type="email"
+                      className="form-control  "
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                      required
+                      onBlur={(e) =>
+                        setFormValidity({
+                          ...formValidity,
+                          email: e.target.checkValidity(),
+                        })
+                      }
+                    />
+                    <label
+                      for="floatingInput"
+                      className="form-label  was-validated "
+                    >
+                      Email address
+                    </label>
+                    <div className="invalid-feedback">
+                      Please enter a valid email address
+                    </div>
+                  </div>
+
+                  <div className="form-floating  fw-bold  text-secondary  bod col-10 col-lg-7 ">
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="floatingPassword"
+                      placeholder="Password"
+                      required
+                      minLength="6"
+                      onBlur={(e) =>
+                        setFormValidity({
+                          ...formValidity,
+                          password: e.target.checkValidity(),
+                        })
+                      }
+                    />
+                    <label for="floatingPassword" form="form-label">
+                      Password
+                    </label>
+                    <div className="invalid-feedback">
+                      Please enter the password with minimum length of 6
+                    </div>
+                  </div>
+                  <p>
+                    <Link to="/forget" className=" float-end  col-6 mt-2 ">
+                      Forget Password
+                    </Link>
+                  </p>
+                  <button
+                    href="/"
+                    className="btn btn-primary fs-5  col-9 col-lg-6  me-2  mt-1 p-3"
+                    type="submit"
+                  >
+                    Sign In
+                  </button>
+                </form>
               </div>
+
+              {/* -- */}
             </div>
           </div>
         </div>

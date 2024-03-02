@@ -1,13 +1,14 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
 import Content from './coursecontent';
 // import Comments from './comments';
-import Data from './Api';
 import Footer from './Footer';
 import QData2 from './Qestiondata2';
+import Header from './header';
+import Getinterviewcard from './getinterviewcard';
+import Comments from './comments';
 
 function Systemdesign() {
-   const [apiData] = useState(Data);
+   
    const [contentdata, ] = useState(Content);
 
     // strict equality operator
@@ -30,178 +31,15 @@ function Systemdesign() {
       setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
     };
 
+    function signpage (){
+      window.location = "/signin";
+    }
+
 
   return (
     <>
       {/* -----------nav bar----------- */}
-      <div className="header  bg-body-tertiary   fixed-top">
-        <nav className="navbar  navbar-expand-md">
-          <div className="container-fluid togglebt">
-            <button
-              className="ms-3  bg-body-tertiary    fs-2 border-0 d-block d-md-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span className="icontog">
-                <i className="bi bi-grid text-primary "></i>
-              </span>
-            </button>
-
-            <a className="m-3 d-none d-md-block" href="/">
-              <img src="img/TitleLogo.png" alt="logo" height={35} />
-            </a>
-
-            <a
-              className="navbar-brand  d-none d-md-block d-lg-block"
-              href="_blank"
-            >
-              <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
-            </a>
-            {/* ---------------small screen----------- */}
-            <div
-              className="offcanvas offcanvas-start float-start "
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div className="offcanvas-header">
-                <h5
-                  className="offcanvas-title fw-bold fs-2"
-                  id="offcanvasNavbarLabel"
-                >
-                  Close
-                </h5>
-                <button
-                  type="button"
-                  className=" border-0  bg-transparent "
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                >
-                  <i className="bi bi-x-diamond-fill text-danger fs-1"></i>
-                </button>
-              </div>
-
-              <div className="offcanvas-body">
-                <ul className="navbar-nav  pe-3 fs-3 fw-bold">
-                  <li className="Courseslg nav-item dropdown d-block d-sm-block d-md-none">
-                    <a
-                      className="nav-link text-dark  dropdown-toggle"
-                      href="_blank"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Courses
-                    </a>
-                    <ul className="dropdown-menu fs-4">
-                      <li>
-                        <a className="dropdown-item" href="/systemdesign">
-                          System Design Simplified
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/dataStructure">
-                          Data Structures & Algorithms
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/Behavioural">
-                          Behavioural Interviews
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item d-block d-md-none ">
-                    <a
-                      href="/blog"
-                      className="nav-link pointer-event  active fs-3 fw-bold"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                  <li className="nav-item d-block d-md-none fs-3 fw-bold">
-                    <a className="nav-link active" aria-current="page" href="/">
-                      FAQs
-                    </a>
-                  </li>
-                  <li className="nav-item  d-block d-md-none">
-                    <a
-                      className="nav-link active fs-3 fw-bold"
-                      aria-current="page"
-                      href="/"
-                    >
-                      Testimonials
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* ---------------small screen----------- */}
-            </div>
-
-            <a className="m-3 me-auto d-block d-md-none" href="/">
-              <img src="img/TitleLogo.png" alt="logo" height={35} />
-            </a>
-            <ul className="d-flex">
-              <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2  m-2">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="_blank"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Courses
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/systemdesign" className="dropdown-item">
-                      System Design Simplified
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/dataStructure" className="dropdown-item">
-                      Data Structures & Algorithms
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/Behavioural" className="dropdown-item">
-                      Behavioural Interviews
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item  fw-bolder list-unstyled pt-2  m-2 me-0">
-                <Link to="/blog" className="nav-link  pointer-event  active">
-                  Blog
-                </Link>
-              </li>
-
-              <li className="nav-item list-unstyled m-2 pt-2 ">
-                <Link
-                  to="/signin"
-                  className="nav-link fw-bolder pointer-event  "
-                >
-                  Sign in
-                </Link>
-              </li>
-
-              <li className="nav-item list-unstyled pt-2 pe-3">
-                <a href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer">
-                  <button
-                    type="button"
-                    className="btn border-2 fw-bold btn-outline-primary"
-                  >
-                    Try for Free
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <Header />
       {/* -----nav end--------- */}
       <div className="SDScards d-none d-lg-block">
         <div className="course1 d-flex">
@@ -226,7 +64,7 @@ function Systemdesign() {
 
       <div className="row row-cols-1 container-fluid   row-cols-lg-2  ">
         {/* ------------small screen card---- */}
-        <div className="card01 smcard d-block d-lg-none ms-4">
+        <div className="card01 smcard d-block d-lg-none ms-2">
           <div className="card  cardswidthSDY border-1 border-primary    CourseCard ">
             <video
               className="img-fluid m-2  rounded-2 "
@@ -273,17 +111,19 @@ function Systemdesign() {
             <div className=" ">
               <div className="d-grid gap-2 ">
                 <button
+                  onClick={signpage}
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
                   Buy Now
                 </button>
-                <button
+                <a
+                  href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer"
                   className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "
                   type="button"
                 >
                   Try for Free
-                </button>
+                </a>
               </div>
             </div>
             <div className=" mt-3 fw-bold text-body-secondary ">
@@ -393,17 +233,17 @@ function Systemdesign() {
               Read More
             </p>
           </div>
-          {/* -------------------------------------------- */}
+          {/* ----------------------content video---------------------- */}
 
-          <div className=" mt-5 ms-3   text-dark  rounded-2 ">
-            <h2>Course Content</h2>
+          <div className=" mt-5    text-dark  rounded-2 ">
+            <h2 className="ms-lg-5  fw-bold">Course Content</h2>
             {contentdata.map((curElem1) => {
               const { id, title } = curElem1;
 
               return (
                 <>
                   <div className="" key={curElem1}>
-                    <ul className="list-unstyled m-0">
+                    <ul className="list-unstyled m-0 mx-lg-4 ">
                       <li
                         className=" content bg-body-secondary rounded-2 p-2 "
                         onClick={() => handleButtonClick(id)}
@@ -416,6 +256,8 @@ function Systemdesign() {
               );
             })}
           </div>
+          {/* ----------------------content video---------------------- */}
+
           {/* --------------Live classes---------- */}
           <div className="Liveclass my-4 py-3  p-lg-3  rounded-3  mx-3 mx-md-5 text-center ">
             <h3 className="LiveClasses mt-md-4 fs-2 fw-bolder  text-primary ">
@@ -433,6 +275,10 @@ function Systemdesign() {
               ></video>
             </div>
           </div>
+          {/* --------------Live classes end---------- */}
+
+          {/* --------------Meet Your Instructor---------- */}
+
           <h2 className=" ms-lg-5  text-sm-center text-center  fw-bold  ">
             Meet Your Instructor
           </h2>
@@ -446,9 +292,12 @@ function Systemdesign() {
             </div>
 
             <div className="mt-3 text-center  text-sm-center  col-lg-7 col-12">
-              <h3>Gaurav Sen</h3>
-              <p> Ex Software Engineer @ Uber, Directi</p>
-              <p>
+              <h3 className=" fw-bold ">Gaurav Sen</h3>
+              <p className=" fw-bold text-body-secondary ">
+                {" "}
+                Ex Software Engineer @ Uber, Directi
+              </p>
+              <p className=" fw-bold text-body-secondary ">
                 {" "}
                 Meet Gaurav, founder, and CEO of InterviewReady. He has a
                 background in distributed systems and software engineering at
@@ -458,15 +307,17 @@ function Systemdesign() {
                 institutions like University of Houston-Texas, IIT Gandhinagar,
                 and BITS Hyderabad.
               </p>
-              <div className=" d-flex fs-3 ">
+              <div className=" justify-content-center  d-flex gap-4  fs-2 ">
                 <i class="bi bi-linkedin "></i>
                 <i class="bi bi-youtube mx-3"></i>
                 <i class="bi bi-twitter"></i>
               </div>
             </div>
           </div>
+          {/* --------------Meet Your Instructor end---------- */}
+
           {/* -------------------Questionssss------ */}
-          <div className="my-5 mx-4 ">
+          <div className="my-4 mx-1 me-lg-5  ">
             <h2 className="text-center fs-1 fw-bold text-primary ">
               Frequently Asked Questions
             </h2>
@@ -497,8 +348,9 @@ function Systemdesign() {
             </div>
           </div>
         </div>
+        {/* -------------------Questionssss end------ */}
 
-        {/* ----------------card---------------- */}
+        {/* ----------------card lg screen---------------- */}
         <div className="card01   d-none d-lg-block   col-lg-3 col-12">
           <div className="card   cardswidthSDY border-1 border-primary    CourseCard ">
             <video
@@ -546,17 +398,19 @@ function Systemdesign() {
             <div className=" ">
               <div className="d-grid gap-2 ">
                 <button
+                  onClick={signpage}
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
                   Buy Now
                 </button>
-                <button
+                <a
+                  href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer"
                   className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "
                   type="button"
                 >
                   Try for Free
-                </button>
+                </a>
               </div>
             </div>
             <div className=" mt-3 fw-bold text-body-secondary ">
@@ -613,80 +467,14 @@ function Systemdesign() {
           </div>
         </div>
       </div>
-      {/* --------------comments------------------------------------- */}
-      <div className="CommentsCards m-2 m-md-5  bgprimay  bg-opacity-6  rounded-3 p-3 ">
-        <h2 className=" fw-bold  text-center text-primary">
-          A Software Engineer’s <br /> Best kept Secret
-        </h2>
-        <p className="text-center fs-6 text-secondary-emphasis">
-          Our courses have helped thousands of <br /> engineers, get their dream
-          job at their dream companies.
-        </p>
-        <div
-          className="row row-cols-md-2 row-cols-xl-3 d-md-flex m-1 justify-content-center m-md-3 overflow-y-scroll overflow-hidden "
-          style={{ height: "600px" }}
-        >
-          {/* -------------------card 1----------------- */}
+      {/* ----------------card lg screen end---------------- */}
 
-          {apiData.map((curElem) => {
-            const { name, bio, image, description } = curElem;
+      {/* --------------comments----------------- */}
+      <Comments />
+      {/* --------------comments end----------------- */}
 
-            return (
-              <>
-                <div className="card mt-3 p-0 col-md-5 mx-4" key={curElem}>
-                  <div className="card-body">
-                    <div className="d-flex row row-cols-2">
-                      <img
-                        src={image}
-                        className="img-fluid rounded-start-circle rounded-end-circle  col-3"
-                        alt="img"
-                      />
-                      <p className="card-title fs-4 fw-bold  col-9">
-                        {name}
-                        <p className="card-subtitle cmtcardbio mb-2 text-body-secondary">
-                          {bio}
-                        </p>
-                      </p>
-                    </div>
+      <Getinterviewcard />
 
-                    <p className="card-text mt-2">
-                      <p>
-                        <i class="bi bi-star-fill text-warning me-1"></i>
-                        <i class="bi bi-star-fill text-warning me-1"></i>
-                        <i class="bi bi-star-fill text-warning me-1"></i>
-                        <i class="bi bi-star-fill text-warning me-1 "></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                      </p>
-                      {description}
-                    </p>
-                  </div>
-                </div>
-              </>
-            );
-          })}
-        </div>
-      </div>
-      <div className=" m-3 m-md-5 ">
-        <div className=" bg-primary  py-3  rounded-3">
-          <div className=" text-center d-flex justify-content-center ">
-            <h1 className=" mt-md-5  text-light fw-bold">
-              Get InterviewReady <br /> Now! <br />
-              <button
-                type="button"
-                class="btn mt-md-5 mt-3  bg-light-subtle  rounded-3  px-5  text-primary  btn-lg"
-              >
-                Start Learning
-              </button>
-            </h1>
-
-            <img
-              src="img/cmt/gk_333.png"
-              className="img-fluid pngimg  d-none d-md-block"
-              alt="pngimg"
-            />
-          </div>
-        </div>
-      </div>
       {/* ----------footer---------------------- */}
       <Footer />
     </>
