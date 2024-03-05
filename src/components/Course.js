@@ -157,7 +157,7 @@ function Course() {
                 Buy for 50% OFF
               </p>
               <div className="text-dark fw-bold">
-                ₹6,490.00{" "}
+                ₹6,490.00
                 <a href="/" className="fw-lighter text-secondary text-decoration-line-through">
                   ₹12,980.00
                 </a>
@@ -195,7 +195,7 @@ function Course() {
               <p className="card-text  d-none d-sm-block">
                 This course is for professionals with 0 to 10 years of
                 experience who is applying for a job and looking to ace their
-                behavioral interviews. The facilitator, Dr. Ashis Sen, is a
+                behavioral interviews.  The facilitator, Dr. Ashis Sen, is a
                 subject matter expert on competency-based interviewing.
               </p>
             </div>
