@@ -6,7 +6,7 @@ function Footer() {
       <div className="m-3 m-md-5 p-lg-5  d-flex row  row-cols-3  row-cols-md-5 ">
         <div className="col-md-5 mb-4  col-12  px-md-3 ">
           <a className="m-3 " href="_blank">
-            <i class="bi bi-mortarboard-fill fs-2 text-primary"></i>
+            <i className="bi bi-mortarboard-fill fs-2 text-primary"></i>
           </a>
 
           <a className="navbar-brand fs-4" href="_blank">
@@ -17,9 +17,9 @@ function Footer() {
             your next big interview.
           </p>
           <div className="footicon fs-2">
-            <i class="bi bi-youtube text-danger   me-4"></i>
-            <i class="bi bi-linkedin text-primary  me-4 "></i>
-            <i class="bi bi-twitter text-primary"></i>
+            <i className="bi bi-youtube text-danger   me-4"></i>
+            <i className="bi bi-linkedin text-primary  me-4 "></i>
+            <i className="bi bi-twitter text-primary"></i>
           </div>
         </div>
         <div className="col-md-2 col-4">

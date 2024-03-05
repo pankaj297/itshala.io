@@ -11,11 +11,6 @@ const Demo = [
   {
     id: 2,
     title: "How to create api",
-    // video: {
-    //   video1: "video1",
-    //   video2: "video2",
-    //   video3: "video3",
-    // },
     video : "ffjofjjfpoj"
     
   },

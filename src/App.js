@@ -29,7 +29,7 @@ function App() {
         <Route path="/varification" element={<Varification />} />
         <Route path="/newpassword" element={<Newpassword />} />
         <Route path="/signin" element={<Sign />} />
-        <Route path="blog" element={ <Blog />} />
+        <Route path="/blog" element={ <Blog />} />
         <Route path="/faqs" element={ <Faqs />} />
         <Route path="/comments" element={ <Comments /> }/>
         <Route path="/systemdesign" element={ <Systemdesign />} />

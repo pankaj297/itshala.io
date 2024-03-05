@@ -29,7 +29,7 @@ function Allcomponents() {
         <Whatsets />
       </div>
       <div className="CommentsCards">
-        <Comments />
+        <Comments  />
       </div>
       <div>
         <Faqs />

@@ -308,9 +308,9 @@ function Systemdesign() {
                 and BITS Hyderabad.
               </p>
               <div className=" justify-content-center  d-flex gap-4  fs-2 ">
-                <i class="bi bi-linkedin "></i>
-                <i class="bi bi-youtube mx-3"></i>
-                <i class="bi bi-twitter"></i>
+                <i className="bi bi-linkedin "></i>
+                <i className="bi bi-youtube mx-3"></i>
+                <i className="bi bi-twitter"></i>
               </div>
             </div>
           </div>
@@ -333,7 +333,7 @@ function Systemdesign() {
                     >
                       {curText}
                       <button
-                        class="bi bi-plus-square   fs-2  fw-medium  border-0 text-primary me-2  bgprimay  float-end "
+                        className="bi bi-plus-square   fs-2  fw-medium  border-0 text-primary me-2  bgprimay  float-end "
                         onClick={() => handleButtonClick2(id)}
                       >
                         {/* {expandedCard === id ? " " : " "} */}

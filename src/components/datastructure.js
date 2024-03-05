@@ -118,23 +118,23 @@ function DataStructure() {
                     150+ Video Lessons
                   </li>
 
-                  <li class="list-group-item mt-2">
-                    <i class="bi bi-file-earmark-code  text-primary   pe-2 "></i>
+                  <li className="list-group-item mt-2">
+                    <i className="bi bi-file-earmark-code  text-primary   pe-2 "></i>
                     Full Coding Environment
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
                     Optimal Solutions
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-clock  text-primary   pe-2"></i>Continuous
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-clock  text-primary   pe-2"></i>Continuous
                     Updates
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-alexa  text-primary   pe-2 "></i>AI
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-alexa  text-primary   pe-2 "></i>AI
                     Assistant
                   </li>
 
@@ -258,9 +258,9 @@ function DataStructure() {
                   team, today he runs interviewpen.com full-time.
                 </p>
                 <div className=" justify-content-center gap-4 d-flex fs-2 ">
-                  <i class="bi bi-linkedin "></i>
-                  <i class="bi bi-youtube mx-3"></i>
-                  <i class="bi bi-twitter"></i>
+                  <i className="bi bi-linkedin "></i>
+                  <i className="bi bi-youtube mx-3"></i>
+                  <i className="bi bi-twitter"></i>
                 </div>
               </div>
             </div>
@@ -282,7 +282,7 @@ function DataStructure() {
                       >
                         {curText}
                         <button
-                          class="bi bi-plus-square   fs-2  fw-medium  border-0 text-primary me-2  bgprimay  float-end "
+                          className="bi bi-plus-square   fs-2  fw-medium  border-0 text-primary me-2  bgprimay  float-end "
                           onClick={() => handleButtonClick3(id)}
                         >
                           {/* {expandedCard === id ? " " : " "} */}
@@ -354,23 +354,23 @@ function DataStructure() {
                     150+ Video Lessons
                   </li>
 
-                  <li class="list-group-item mt-2">
-                    <i class="bi bi-file-earmark-code  text-primary   pe-2 "></i>
+                  <li className="list-group-item mt-2">
+                    <i className="bi bi-file-earmark-code  text-primary   pe-2 "></i>
                     Full Coding Environment
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-file-earmark-pdf text-primary   pe-2 "></i>
                     Optimal Solutions
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-clock  text-primary   pe-2"></i>Continuous
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-clock  text-primary   pe-2"></i>Continuous
                     Updates
                   </li>
 
-                  <li class="list-group-item pt-2">
-                    <i class="bi bi-alexa  text-primary   pe-2 "></i>AI
+                  <li className="list-group-item pt-2">
+                    <i className="bi bi-alexa  text-primary   pe-2 "></i>AI
                     Assistant
                   </li>
 

@@ -10,7 +10,7 @@ function Getinterviewcard() {
               Get InterviewReady <br /> Now! <br />
               <button
                 type="button"
-                class="btn mt-md-5 mt-3  bg-light-subtle  rounded-3  px-5  text-primary  btn-lg"
+                className="btn mt-md-5 mt-3  bg-light-subtle  rounded-3  px-5  text-primary  btn-lg"
               >
                 Start Learning
               </button>

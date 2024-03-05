@@ -30,7 +30,7 @@ function Whatsets() {
                   className="col-md-3 px-lg-5 fs-3 px-md-4 py-3 fs-4  text-light-emphasis fs fw-bold bg-primary-subtle  "
                   scope="col"
                 >
-                  <i class="bi bi-mortarboard-fill fs-3 text-primary   m-1 "></i>
+                  <i className="bi bi-mortarboard-fill fs-3 text-primary   m-1 "></i>
                   INTERVIEW READY
                 </th>
               </tr>
@@ -44,13 +44,13 @@ function Whatsets() {
                   Video Lessons
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -61,13 +61,13 @@ function Whatsets() {
                   PDF Resources
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -78,13 +78,13 @@ function Whatsets() {
                   Lifetime Validity
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill  fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill  fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -95,13 +95,13 @@ function Whatsets() {
                   Live Zoom <br /> Classes
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -112,26 +112,26 @@ function Whatsets() {
                   System Design <br /> Judge
                 </th>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3  text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3  text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-x-circle-fill fs-3 text-danger "></i>
+                  <i className="bi bi-x-circle-fill fs-3 text-danger "></i>
                 </td>
                 <td className="pt-4">
-                  <i class="bi bi-check-circle-fill fs-3  text-primary"></i>
+                  <i className="bi bi-check-circle-fill fs-3  text-primary"></i>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <style jsx>{`
+        {/* <style jsx>{`
           td,
           th {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
-        `}</style>
+        `}</style> */}
       </div>
     </>
   );

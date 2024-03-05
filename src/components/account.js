@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 function Account() {
   const [apiData] = useState(Data);
 
-  // function verification() {
-  //   alert("🎉🍾🎊 Account Create Successfully 🎉🍾🎊");
-  // }
   const [formValidity, setFormValidity] = useState({
     name: false,
     email: false,

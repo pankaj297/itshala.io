@@ -1,42 +1,27 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
-  function blogbtn (){
-    window.location = "/blog"
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-  function systemDS() {
-    window.location = "/systemdesign";
-  }
+  const toggleCourses = () => {
+    setIsCoursesOpen(!isCoursesOpen);
+  };
 
-  function dataSA(){
-    window.location = "/dataStructure";
-  }
-  function behavIner(){
-    window.location = "/Behavioural";
-  }
-  function faqs() {
-    window.location = "/faqs";
-  }
-  function testimonials(){
-    window.location = "/comments";
-  }
   return (
     <>
-      <div className="header bg-body-tertiary   fixed-top">
-        <nav className="navbar  navbar-expand-md">
+      <div className="header bg-body-tertiary fixed-top">
+        <nav className="navbar navbar-expand-md">
           <div className="container-fluid togglebt">
             <button
-              className="ms-2 bg-body-tertiary  fs-2 border-0 d-block d-md-none"
+              className="ms-2 bg-body-tertiary fs-2 border-0 d-block d-md-none"
               type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
+              onClick={toggleMenu}
             >
               <i className="bi bi-grid"></i>
             </button>
@@ -46,15 +31,17 @@ function Header() {
             </a>
 
             <a
-              className="navbar-brand  d-none d-md-block d-lg-block"
+              className="navbar-brand d-none d-md-block d-lg-block"
               href="_blank"
             >
               <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
             </a>
-            {/* ---------------small screen----------- */}
+
             <div
-              className="offcanvas offcanvas-start float-start "
-              tabindex="-1"
+              className={`offcanvas offcanvas-start float-start ${
+                isMenuOpen ? "show" : ""
+              }`}
+              tabIndex="-1"
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
             >
@@ -67,8 +54,8 @@ function Header() {
                 </h5>
                 <button
                   type="button"
-                  className=" border-0  bg-transparent "
-                  data-bs-dismiss="offcanvas"
+                  className="border-0 bg-transparent"
+                  onClick={toggleMenu}
                   aria-label="Close"
                 >
                   <i className="bi bi-x-diamond-fill text-danger fs-1"></i>
@@ -76,83 +63,97 @@ function Header() {
               </div>
 
               <div className="offcanvas-body">
-                <ul className="navbar-nav  pe-3 fs-3 fw-bold">
-                  <li className="Courseslg nav-item dropdown d-block d-sm-block d-md-none">
-                    <a
-                      className="nav-link text-dark  dropdown-toggle"
-                      href="_blank"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                <div className="navbar-nav pe-3 fs-3 fw-bold">
+                  <div className="Courseslg nav-item dropdown d-block d-sm-block d-md-none">
+                    <button
+                      className="nav-link text-dark dropdown-toggle"
+                      onClick={toggleCourses}
+                      aria-expanded={isCoursesOpen}
                     >
                       Courses
-                    </a>
-                    <ul className="dropdown-menu fs-4">
-                      {/* -----------------Toggle button react routing error ---------------- */}
+                    </button>
+                    <ul
+                      className={`dropdown-menu fs-4 ${
+                        isCoursesOpen ? "show" : ""
+                      }`}
+                    >
                       <li>
-                        <button onClick={systemDS} className="dropdown-item">
+                        <Link to="/systemdesign" className="dropdown-item">
                           System Design Simplified
-                        </button>
+                        </Link>
                       </li>
                       <li>
-                        <button onClick={dataSA} className="dropdown-item">
+                        <Link to="/dataStructure" className="dropdown-item">
                           Data Structures & Algorithms
-                        </button>
+                        </Link>
                       </li>
                       <li>
-                        <button onClick={behavIner} className="dropdown-item">
+                        <Link to="/Behavioural" className="dropdown-item">
                           Behavioural Interviews
-                        </button>
+                        </Link>
                       </li>
                     </ul>
-                  </li>
-                  <li className="nav-item d-block d-md-none ">
-                    <button
-                      onClick={blogbtn}
-                      className="nav-link pointer-event  active fs-3 fw-bold"
+                  </div>
+                  <li
+                    className={`nav-item d-block d-md-none ${
+                      isMenuOpen ? "show" : ""
+                    }`}
+                  >
+                    <Link
+                      to="/blog"
+                      className="nav-link pointer-event active fs-3 fw-bold"
+                      onClick={toggleMenu}
                     >
                       Blog
-                    </button>
+                    </Link>
                   </li>
-                  <li className="nav-item d-block d-md-none fs-3 fw-bold">
-                    <button
-                      onClick={faqs}
+                  <li
+                    className={`nav-item d-block d-md-none fs-3 fw-bold ${
+                      isMenuOpen ? "show" : ""
+                    }`}
+                  >
+                    <Link
+                      to="/faqs"
                       className="nav-link active"
                       aria-current="page"
+                      onClick={toggleMenu}
                     >
                       FAQs
-                    </button>
+                    </Link>
                   </li>
-                  <li className="nav-item  d-block d-md-none">
-                    <button
-                      onClick={testimonials}
+                  <li
+                    className={`nav-item d-block d-md-none ${
+                      isMenuOpen ? "show" : ""
+                    }`}
+                  >
+                    <Link
+                      to="/comments"
                       className="nav-link active fs-3 fw-bold"
                       aria-current="page"
+                      onClick={toggleMenu}
                     >
                       Testimonials
-                    </button>
+                    </Link>
                   </li>
-                  {/* -----------------Toggle button react routing error ---------------- */}
-                </ul>
+                </div>
               </div>
-              {/* ---------------small screen----------- */}
             </div>
 
             <a className="m-3 me-auto d-block d-md-none" href="/">
               <img src="img/TitleLogo.png" alt="logo" height={35} />
             </a>
             <ul className="d-flex">
-              <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2  m-2">
-                <a
+              <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2 m-2">
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="_blank"
+                  to="_blank"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  onClick={toggleCourses}
+                  aria-expanded={isCoursesOpen}
                 >
                   Courses
-                </a>
-                <ul className="dropdown-menu">
+                </Link>
+                <ul className={`dropdown-menu ${isCoursesOpen ? "show" : ""}`}>
                   <li>
                     <Link to="/systemdesign" className="dropdown-item">
                       System Design Simplified
@@ -170,17 +171,14 @@ function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item  fw-bolder list-unstyled pt-2  m-2 me-0 d-none d-md-block ">
-                <Link to="/blog" className="nav-link  pointer-event  active">
+              <li className="nav-item fw-bolder list-unstyled pt-2 m-2 me-0 d-none d-md-block">
+                <Link to="/blog" className="nav-link pointer-event active">
                   Blog
                 </Link>
               </li>
 
-              <li className="nav-item list-unstyled m-2 pt-2 ">
-                <Link
-                  to="/signin"
-                  className="nav-link fw-bolder pointer-event  "
-                >
+              <li className="nav-item list-unstyled m-2 pt-2">
+                <Link to="/signin" className="nav-link fw-bolder pointer-event">
                   Sign in
                 </Link>
               </li>
@@ -204,5 +202,3 @@ function Header() {
 }
 
 export default Header;
-
-
