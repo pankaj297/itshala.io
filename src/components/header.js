@@ -26,16 +26,16 @@ function Header() {
               <i className="bi bi-grid"></i>
             </button>
 
-            <a className="m-2 d-none d-md-block" href="/">
+            <Link to="/" className="m-2 d-none d-md-block">
               <img src="img/TitleLogo.png" alt="logo" height={35} />
-            </a>
+            </Link>
 
-            <a
+            <Link
               className="navbar-brand d-none d-md-block d-lg-block"
-              href="_blank"
+              to="/"
             >
               <b>INTERVIEW</b> <b className="m-2 text-primary">READY</b>
-            </a>
+            </Link>
 
             <div
               className={`offcanvas offcanvas-start float-start ${
@@ -139,19 +139,19 @@ function Header() {
               </div>
             </div>
 
-            <a className="m-3 me-auto d-block d-md-none" href="/">
+            <Link to="/" className="m-3 me-auto d-block d-md-none" >
               <img src="img/TitleLogo.png" alt="logo" height={35} />
-            </a>
+            </Link>
             <ul className="d-flex">
               <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2 m-2">
-                <a
-                  className="nav-link dropdown-toggle"
+                <Link
+                  className=" nav-link dropdown-toggle"
                   role="button"
                   onClick={toggleCourses}
                   aria-expanded={isCoursesOpen}
                 >
                   Courses
-                </a>
+                </Link>
                 <ul className={`dropdown-menu ${isCoursesOpen ? "show" : ""}`}>
                   <li>
                     <Link to="/systemdesign" className="dropdown-item">
