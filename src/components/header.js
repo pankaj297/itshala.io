@@ -144,15 +144,14 @@ function Header() {
             </a>
             <ul className="d-flex">
               <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2 m-2">
-                <Link
+                <a
                   className="nav-link dropdown-toggle"
-                  to="_blank"
                   role="button"
                   onClick={toggleCourses}
                   aria-expanded={isCoursesOpen}
                 >
                   Courses
-                </Link>
+                </a>
                 <ul className={`dropdown-menu ${isCoursesOpen ? "show" : ""}`}>
                   <li>
                     <Link to="/systemdesign" className="dropdown-item">

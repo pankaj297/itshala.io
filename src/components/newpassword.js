@@ -31,17 +31,13 @@ function Newpassword() {
       let rNum6 = Math.floor(Math.random() * 6); 
 
       alert(" ✅ OTP  🔔 is : " + rNum1 + " " + rNum2 + " " + rNum3 + " " + rNum4 + " " + rNum5 +" " + rNum6);
-      window.location = "/varification";
+      
     } else {
       alert("Please fill in the required fields.");
     }
   };
 
-  // let  btn1 = document.getElementById('btn1');
-  // btn1.addEventListener("click".handleSubmit);
-
-  // ----------------------------------------------
-  
+ 
   return (
     <>
       <div className="sign ">
@@ -156,7 +152,10 @@ function Newpassword() {
               </div>
 
               <div className="">
-                <form  onSubmit={handleSubmit} className="d-flex justify-content-center row row-cols-1">
+                <form
+                  onSubmit={handleSubmit}
+                  className="d-flex justify-content-center row row-cols-1"
+                >
                   <div className="form-floating fw-bold text-secondary  bod border-5 col-10  col-lg-7 mb-3">
                     <input
                       type="password"
@@ -165,7 +164,6 @@ function Newpassword() {
                       placeholder="password"
                       required
                       minLength="6"
-
                       onBlur={(e) =>
                         setFormValidity({
                           ...formValidity,
@@ -195,15 +193,13 @@ function Newpassword() {
                     </label>
                   </div>
 
-            
-                    <button
-                      id="btn1"
-                      className="btn btn-primary fs-5  w-50  me-3  mt-1 p-3 px-5"
-                      type="submit"
-                    >
-                      Submit
-                    </button>
-                  
+                  <Link
+                    to="/varification"
+                    className="btn btn-primary fs-5  w-50  me-3  mt-1 p-3 px-5"
+                    type="submit"
+                  >
+                    Submit
+                  </Link>
                 </form>
               </div>
             </div>

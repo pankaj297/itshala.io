@@ -192,8 +192,7 @@ function Sign() {
                     </Link>
                   </p>
                   <button
-                    href="/"
-                    className="btn btn-primary fs-5  col-9 col-lg-6  me-2  mt-1 p-3"
+                    className="btn  btn-primary fs-5  col-9 col-lg-6  me-2  mt-1 p-3"
                     type="submit"
                   >
                     Sign In

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Forget() {
 
+
      const [apiData] = useState(Data);
 
 
@@ -15,8 +16,9 @@ function Forget() {
        e.preventDefault();
 
        if (formValidity.email) {
-        //  alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
-         window.location = "/newpassword";
+        //  alert("🔑Setup password🔑");
+        //  window.location = "/newpassword";
+         
        } else {
          alert("Please fill in the required fields.");
        }
@@ -133,7 +135,8 @@ function Forget() {
               <div className="">
                 <form
                   onSubmit={handleSubmit}
-                 className="d-flex justify-content-center row row-cols-1">
+                  className="d-flex justify-content-center row row-cols-1"
+                >
                   <div className="form-floating fw-bold  text-secondary  bod border-5 col-10  col-lg-7 mb-3">
                     <input
                       type="email"
@@ -160,24 +163,17 @@ function Forget() {
                   </div>
 
                   <div className="">
-                    {/* <a
-                      href="/newpassword"
-                      className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
-                      type="submit"
-                    >
-                      Submit
-                    </a> */}
-                    <button
-                      href="/"
+                    <Link
+                      to="/newpassword"
                       className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
                       type="submit"
                     >
                       Sign In
-                    </button>
+                    </Link>
                     <Link
                       to="/signin"
                       className="btn bg-secondary  text-white  fs-5    me-2  mt-1 p-3 px-5"
-                      type="button"
+                      type="submit"
                     >
                       Cancel
                     </Link>

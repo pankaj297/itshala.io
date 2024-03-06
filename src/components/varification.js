@@ -7,11 +7,7 @@ function Varification() {
 
       const [apiData] = useState(Data);
 
-      // function verification(){
-      //    alert("🎉🍾🎊Two Step Varification Successfully 🎉🍾🎊");
-      // }
-
-
+    
       const [formValidity, setFormValidity] = useState({
         number: false,
 
