@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Course() { 
- 
   
   return (
     <>
@@ -88,12 +87,13 @@ function Course() {
                   ₹15,990.00
                 </a>
               </div>
-              <a
-                href="/"
+              <Link
+                to="/systemdesign"
+                type="button"
                 className="btn mt-2  w-100  border-primary  border-2 fw-bold   text-primary "
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -170,12 +170,12 @@ function Course() {
                   ₹12,980.00
                 </a>
               </div>
-              <a
-                href="/"
+              <Link
+                to="/dataStructure"
                 className="btn mt-2 w-100 fw-bold border-danger  border-2  text-danger  card-link"
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
           {/* ------------------------card 3 ------------------------------ */}
@@ -254,12 +254,12 @@ function Course() {
                   ₹3,990.00
                 </a>
               </div>
-              <a
-                href="/"
+              <Link
+                to="/Behavioural"
                 className="btn w-100 mt-2   fw-bold   border-info border-2  text-info "
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
