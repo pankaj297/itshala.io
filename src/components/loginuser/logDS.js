@@ -1,44 +1,38 @@
-import React, { useState } from "react";
-import QData3 from "./questiondata3";
-import Demo from "./ademoapi";
-import Header from "./header";
-import Comments from "./comments";
-import Getinterviewcard from "./getinterviewcard";
-import Footer from "./Footer";
+import React, {useState} from 'react';
+import QData3 from "../questiondata3";
+import Demo from "../ademoapi";
+import Loginusernav from './loginusernav';
+import Comments from "../comments";
+import Getinterviewcard from "../getinterviewcard";
+import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
+function LogDS() {
 
-function DataStructure() {
-  
-  const [contentdata] = useState(Demo);
+    const [contentdata] = useState(Demo);
 
-  // strict equality operator
+    // strict equality operator
 
-  const [expandedCard, setExpandedCard] = useState(null);
+    const [expandedCard, setExpandedCard] = useState(null);
 
-  const handleButtonClick = (cardId) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId);
-  };
+    const handleButtonClick = (cardId) => {
+      setExpandedCard(expandedCard === cardId ? null : cardId);
+    };
 
-   
-  const [rowData3] = useState(QData3);
+    const [rowData3] = useState(QData3);
 
+    //  strict equality operator
 
-  //  strict equality operator
+    const [expandedCard3, setExpandedCard3] = useState(null);
 
-  const [expandedCard3, setExpandedCard3] = useState(null);
-
-  const handleButtonClick3 = (cardId3) => {
-    setExpandedCard3(expandedCard3 === cardId3 ? null : cardId3);
-  };
+    const handleButtonClick3 = (cardId3) => {
+      setExpandedCard3(expandedCard3 === cardId3 ? null : cardId3);
+    };
 
    
-
   return (
     <>
-      {/* -----------nav bar----------- */}
-      <Header />
-      {/* -----nav end--------- */}
+      <Loginusernav />
       <div className="bigsecontion overflow-y-visible  overflow-scroll">
         <div className="SDScards d-none d-lg-block">
           <div className="course1 d-flex">
@@ -101,7 +95,7 @@ function DataStructure() {
               <div className=" ">
                 <div className="d-grid gap-2 ">
                   <Link
-                    to="/signin"
+                    to="/selectcourse"
                     className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                     type="button"
                   >
@@ -337,7 +331,7 @@ function DataStructure() {
               <div className=" ">
                 <div className="d-grid gap-2 ">
                   <Link
-                    to="/signin"
+                    to="/selectcourse"
                     className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                     type="button"
                   >
@@ -411,11 +405,6 @@ function DataStructure() {
       <Footer />
     </>
   );
-  
-   
 }
 
-
-
-
-export default DataStructure;
+export default LogDS;

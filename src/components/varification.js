@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Data from "./Api";
 // import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Varification() {
@@ -13,12 +14,15 @@ function Varification() {
 
       });
 
+  const navigate = useNavigate();
+
+
       const handleSubmit = (e) => {
         e.preventDefault();
 
         if (formValidity.number) {
           alert("🎉🍾🎊verificaton Successfully 🎉🍾🎊");
-          window.location = "/";
+          navigate("/");
         } else {
           alert("Please fill in the required fields.");
         }

@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
-import Content from './coursecontent';
 // import Comments from './comments';
-import Footer from './Footer';
+import Content from './coursecontent';
 import QData2 from './Qestiondata2';
 import Header from './header';
+import Footer from './Footer';
 import Getinterviewcard from './getinterviewcard';
 import Comments from './comments';
+import { Link } from 'react-router-dom';
 
 function Systemdesign() {
    
@@ -19,7 +20,8 @@ function Systemdesign() {
      setExpandedCard(expandedCard === cardId ? null : cardId);
    };
 
-
+    
+  
 
     const [rowData2] = useState(QData2);
 
@@ -31,9 +33,7 @@ function Systemdesign() {
       setExpandedCard2(expandedCard2 === cardId2 ? null : cardId2);
     };
 
-    function signpage (){
-      window.location = "/signin";
-    }
+   
 
 
   return (
@@ -110,13 +110,13 @@ function Systemdesign() {
             </div>
             <div className=" ">
               <div className="d-grid gap-2 ">
-                <button
-                  onClick={signpage}
+                <Link
+                  to="/signin"
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
                   Buy Now
-                </button>
+                </Link>
                 <a
                   href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer"
                   className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "
@@ -397,13 +397,13 @@ function Systemdesign() {
             </div>
             <div className=" ">
               <div className="d-grid gap-2 ">
-                <button
-                  onClick={signpage}
+                <Link
+                   to="/signin"
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
                   Buy Now
-                </button>
+                </Link>
                 <a
                   href="https://interviewready.io/learn/system-design-course/how-do-i-use-this-course/what-do-we-offer"
                   className="btn border-2 py-2 mx-3  text-primary  btn-md border-primary rounded-5 fw-bold "

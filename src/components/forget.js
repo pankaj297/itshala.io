@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import Data from "./Api";
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 function Forget() {
 
@@ -12,13 +14,14 @@ function Forget() {
        email: false,
      });
 
+  const navigate = useNavigate();
+
      const handleSubmit = (e) => {
        e.preventDefault();
 
        if (formValidity.email) {
-        //  alert("🔑Setup password🔑");
-        //  window.location = "/newpassword";
-         
+          navigate("/newpassword");
+             
        } else {
          alert("Please fill in the required fields.");
        }
@@ -163,13 +166,12 @@ function Forget() {
                   </div>
 
                   <div className="">
-                    <Link
-                      to="/newpassword"
+                    <button
                       className="btn btn-primary fs-5    me-3  mt-1 p-3 px-5"
                       type="submit"
                     >
                       Sign In
-                    </Link>
+                    </button>
                     <Link
                       to="/signin"
                       className="btn bg-secondary  text-white  fs-5    me-2  mt-1 p-3 px-5"

@@ -1,42 +1,38 @@
-import React, { useState } from "react";
-import Content from "./coursecontent";
-import Comments from './comments';
-import Footer from "./Footer";
-import QData4 from "./questiondata4";
-import Getinterviewcard from "./getinterviewcard";
-import Header from "./header";
+import React, {useState} from 'react'
+import Content from "../coursecontent";
+import Comments from "../comments";
+import Footer from "../Footer";
+import QData4 from "../questiondata4";
+import Getinterviewcard from "../getinterviewcard";
 import { Link } from "react-router-dom";
+import Loginusernav from './loginusernav';
 
-function Behavioural() {
+function LogBinterviews() {
 
-  const [contentdata] = useState(Content);
+     const [contentdata] = useState(Content);
 
-  // strict equality operator
+     // strict equality operator
 
-  const [expandedCard, setExpandedCard] = useState(null);
+     const [expandedCard, setExpandedCard] = useState(null);
 
-  const handleButtonClick = (cardId) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId);
-  };
+     const handleButtonClick = (cardId) => {
+       setExpandedCard(expandedCard === cardId ? null : cardId);
+     };
 
+     const [rowData4] = useState(QData4);
 
-  const [rowData4] = useState(QData4);
+     //  strict equality operator
 
-  //  strict equality operator
+     const [expandedCard4, setExpandedCard4] = useState(null);
 
-  const [expandedCard4, setExpandedCard4] = useState(null);
-
-  const handleButtonClick4 = (cardId4) => {
-    setExpandedCard4(expandedCard4 === cardId4 ? null : cardId4);
-  };
+     const handleButtonClick4 = (cardId4) => {
+       setExpandedCard4(expandedCard4 === cardId4 ? null : cardId4);
+     };
 
 
   return (
     <>
-      {/* -----------nav bar----------- */}
-      <Header />
-      {/* -----nav end--------- */}
-
+      <Loginusernav />
       <div className="SDScards d-none d-lg-block">
         <div className="course1 d-flex">
           <div className="SDSblue p-4 col-lg-8">
@@ -110,7 +106,7 @@ function Behavioural() {
             <div className=" ">
               <div className="d-grid gap-2 ">
                 <Link
-                  to="/signin"
+                  to="/selectcourse"
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
@@ -374,7 +370,7 @@ function Behavioural() {
             <div className=" ">
               <div className="d-grid gap-2 ">
                 <Link
-                  to="/signin"
+                  to="/selectcourse"
                   className="btn btn-primary mx-3  py-2 rounded-5 fw-bold btn-md"
                   type="button"
                 >
@@ -459,4 +455,4 @@ function Behavioural() {
   );
 }
 
-export default Behavioural;
+export default LogBinterviews

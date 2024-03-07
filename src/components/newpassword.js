@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Data from "./Api";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Newpassword() {
 
@@ -12,6 +14,8 @@ function Newpassword() {
     newpassword: false,
   });
 
+  //  const navigate = useNavigate();
+  const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +35,7 @@ function Newpassword() {
       let rNum6 = Math.floor(Math.random() * 6); 
 
       alert(" ✅ OTP  🔔 is : " + rNum1 + " " + rNum2 + " " + rNum3 + " " + rNum4 + " " + rNum5 +" " + rNum6);
-      
+      navigate("/varification");
     } else {
       alert("Please fill in the required fields.");
     }
@@ -193,13 +197,12 @@ function Newpassword() {
                     </label>
                   </div>
 
-                  <Link
-                    to="/varification"
+                  <button
                     className="btn btn-primary fs-5  w-50  me-3  mt-1 p-3 px-5"
                     type="submit"
                   >
                     Submit
-                  </Link>
+                  </button>
                 </form>
               </div>
             </div>

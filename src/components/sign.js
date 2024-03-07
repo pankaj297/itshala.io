@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Data from "./Api";
 import { Link } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Sign() {
   const [apiData] = useState(Data);
@@ -10,12 +13,18 @@ function Sign() {
     password: false,
   });
 
+  const navigate = useNavigate();
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (formValidity.email && formValidity.password) {
       alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
-      window.location = "/";
+      // navigate("/Yourcourse");
+      navigate("/Yourcourse");
+
     } else {
       alert("Please fill in the required fields.");
     }
