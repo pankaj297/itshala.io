@@ -6,7 +6,7 @@ function Course() {
   return (
     <>
       {/* ----------------------------card 1-------------------------------- */}
-      <div className="bgprimay pt-5 m-3 rounded-4">
+      <div className="bgprimay pt-5  m-1 p-3 rounded-4">
         <p className="CardTopTextP fs-5 m-2  text-center">
           Master Every Concept. Every Term. Every Detail
         </p>
@@ -14,11 +14,11 @@ function Course() {
           High Quality Video Lessons
         </h3>
         {/* ---------card--------- */}
-        <div className="cardss m-2  justify-content-center  row row-cols-lg-2 row-cols-xxl-3  p-sm-5 row-cols-xxl-2 g-3">
-          <div className="card mx-3 col-lg-5  col-xl-4 CourseCard border-0">
+        <div className="cardss   justify-content-center  row row-cols-md-2 row-cols-xxl-3   row-cols-xxl-3 g-1">
+          <div className="card m-1 col-md-6 p-2  col-xl-4 CourseCard border-0">
             <img
               src="img/thumbnailFvideo.png"
-              className="img-fluid rounded-2  card-img-top my-2"
+              className="img-fluid rounded-2  card-img-top  my-2 "
               alt="img"
             />
             <div className="card-body">
@@ -59,16 +59,18 @@ function Course() {
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-person-video text-primary pe-2"></i>Live Classes
+                <i className="bi bi-person-video text-primary pe-2"></i>Live
+                Classes
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-file-medical text-primary pe-2"></i>Interview
-                Questions
+                <i className="bi bi-file-medical text-primary pe-2"></i>
+                Interview Questions
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-clock text-primary pe-2"></i>Continuous Updates
+                <i className="bi bi-clock text-primary pe-2"></i>Continuous
+                Updates
               </li>
 
               <li className="list-group-item pt-2">
@@ -76,16 +78,18 @@ function Course() {
               </li>
             </ul>
             <div className="card-body ">
-              <p className=" mb-0  text-decoration-none">
-                Buy for 50% OFF
-              </p>
+              <p className=" mb-0  text-decoration-none">Buy for 50% OFF</p>
               <div className="text-dark mt-0  fw-bold">
                 ₹7,995.00{" "}
-                <a href="/" className="fw-lighter text-secondary text-decoration-line-through">
+                <a
+                  href="/"
+                  className="fw-lighter text-secondary text-decoration-line-through"
+                >
                   ₹15,990.00
                 </a>
               </div>
-              <a href="/"
+              <a
+                href="/"
                 className="btn mt-2  w-100  border-primary  border-2 fw-bold   text-primary "
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>
@@ -95,14 +99,16 @@ function Course() {
 
           {/* ------------------card 2---------------- */}
 
-          <div className="card col-lg-5  col-xl-4 CourseCard border-0 ">
+          <div className="card m-1 p-2  col-md-6  col-xl-4 CourseCard border-0 ">
             <img
               src="img/cardphoto2.jpeg"
               className="img-fluid my-2 rounded-2  card-img-top"
               alt="img"
             />
             <div className="card-body ">
-              <h5 className="card-title fw-bold ">Data Structures & Algorithms</h5>
+              <h5 className="card-title fw-bold ">
+                Data Structures & Algorithms
+              </h5>
               <div className="mt-1 d-flex justify-content-between w-25 w-xs-25">
                 <p className=" bg-primary-subtle   p-1 rounded">SDE1</p>
                 <p className=" bg-primary-subtle   mx-2  p-1 rounded">SDE2</p>
@@ -130,17 +136,18 @@ function Course() {
               </li>
 
               <li className="list-group-item mt-2">
-                <i className="bi bi-file-earmark-code text-danger  pe-2 "></i>Full
-                Coding Environment
+                <i className="bi bi-file-earmark-code text-danger  pe-2 "></i>
+                Full Coding Environment
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-file-earmark-pdf text-danger  pe-2 "></i>Optimal
-                Solutions
+                <i className="bi bi-file-earmark-pdf text-danger  pe-2 "></i>
+                Optimal Solutions
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-clock text-danger  pe-2"></i>Continuous Updates
+                <i className="bi bi-clock text-danger  pe-2"></i>Continuous
+                Updates
               </li>
 
               <li className="list-group-item pt-2">
@@ -153,25 +160,26 @@ function Course() {
             </ul>
 
             <div className="card-body">
-              <p  className=" mb-0   text-decoration-none">
-                Buy for 50% OFF
-              </p>
+              <p className=" mb-0   text-decoration-none">Buy for 50% OFF</p>
               <div className="text-dark fw-bold">
                 ₹6,490.00
-                <a href="/" className="fw-lighter text-secondary text-decoration-line-through">
+                <a
+                  href="/"
+                  className="fw-lighter text-secondary text-decoration-line-through"
+                >
                   ₹12,980.00
                 </a>
               </div>
-              <a href="/"
+              <a
+                href="/"
                 className="btn mt-2 w-100 fw-bold border-danger  border-2  text-danger  card-link"
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>
               </a>
             </div>
           </div>
-
           {/* ------------------------card 3 ------------------------------ */}
-          <div className="card col-lg-5  col-xl-4 CourseCard border-0 ">
+          <div className="card m-1 p-2 col-md-6  col-xl-4 CourseCard border-0 ">
             <img
               src="img/cardphoto3.jpeg"
               className="img-fluid my-2 rounded-2  card-img-top"
@@ -195,7 +203,7 @@ function Course() {
               <p className="card-text  d-none d-sm-block">
                 This course is for professionals with 0 to 10 years of
                 experience who is applying for a job and looking to ace their
-                behavioral interviews.  The facilitator, Dr. Ashis Sen, is a
+                behavioral interviews. The facilitator, Dr. Ashis Sen, is a
                 subject matter expert on competency-based interviewing.
               </p>
             </div>
@@ -215,7 +223,8 @@ function Course() {
               </li>
 
               <li className="list-group-item pt-2">
-                <i className="bi bi-person-video text-info pe-2"></i>Live Classes
+                <i className="bi bi-person-video text-info pe-2"></i>Live
+                Classes
               </li>
 
               <li className="list-group-item pt-2">
@@ -233,16 +242,20 @@ function Course() {
             </ul>
 
             <div className="card-body ">
-              <p className="  d-flex  mb-0  text-decoration-none"> 
-                   Buy for  50% OFF
+              <p className="  d-flex  mb-0  text-decoration-none">
+                Buy for 50% OFF
               </p>
               <div className="text-dark mt-0  fw-bold">
                 ₹1,995.00
-                <a href="/" className="fw-lighter text-secondary text-decoration-line-through">
+                <a
+                  href="/"
+                  className="fw-lighter text-secondary text-decoration-line-through"
+                >
                   ₹3,990.00
                 </a>
               </div>
-              <a href="/"
+              <a
+                href="/"
                 className="btn w-100 mt-2   fw-bold   border-info border-2  text-info "
               >
                 Learn More <i className="bi bi-arrow-up-right"></i>

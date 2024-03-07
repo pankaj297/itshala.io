@@ -126,6 +126,28 @@ body{
       
 }
 
+@media only screen and (min-width: 1000px){
+  .lgcomicon1{
+     width: 130px;
+  }
+    .lgcomicon2{
+      width: 90px;
+    }
+    .lgcomicon3{
+      width: 90px;
+    }.lgcomicon4 {
+      width: 60px;
+    }
+}
+@media only screen and (min-width: 600px){
+   .company-logos{
+    width: 80%;
+   }
+   .videobio{
+    width: 45%;
+   }
+}
+
 .logcard {
   background-color: blue;
 }
