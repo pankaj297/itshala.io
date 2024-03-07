@@ -1,5 +1,6 @@
 import React from "react";
 import Loginusernav from "./loginusernav";
+import { Link } from "react-router-dom";
 
 function Yourcourse() {
   return (
@@ -72,12 +73,12 @@ function Yourcourse() {
                       ₹15,990.00
                     </a>
                   </div>
-                  <a
-                    href="/"
+                  <Link
+                    to="/selectcourse"
                     className="btn mt-2  w-100  border-primary  border-2 fw-bold   text-primary "
                   >
-                    Learn More <i className="bi bi-arrow-up-right"></i>
-                  </a>
+                    Buy Now <i className="bi bi-arrow-up-right"></i>
+                  </Link>
                 </div>
               </div>
 
@@ -130,12 +131,12 @@ function Yourcourse() {
                       ₹12,980.00
                     </a>
                   </div>
-                  <a
-                    href="/"
+                  <Link
+                    to="/selectcourse"
                     className="btn mt-2 w-100 fw-bold border-danger  border-2  text-danger  card-link"
                   >
-                    Learn More <i className="bi bi-arrow-up-right"></i>
-                  </a>
+                    Buy Now <i className="bi bi-arrow-up-right"></i>
+                  </Link>
                 </div>
               </div>
               {/* ------------------------card 3 ------------------------------ */}
@@ -180,12 +181,12 @@ function Yourcourse() {
                       ₹3,990.00
                     </a>
                   </div>
-                  <a
-                    href="/"
+                  <Link
+                    to="/selectcourse"
                     className="btn w-100 mt-2  fw-bold   border-info border-2  text-info "
                   >
-                    Learn More <i className="bi bi-arrow-up-right"></i>
-                  </a>
+                    Buy Now <i className="bi bi-arrow-up-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>

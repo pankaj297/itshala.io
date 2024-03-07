@@ -49,16 +49,16 @@ function Selectcourse() {
   return (
     <>
       <Loginusernav />
-      <div className="Selectcourse m-3 container-fluid">
+      <div className="Selectcourse   container-fluid">
         <Link
           to="/Yourcourse"
-          className="border-0 text-decoration-none text-dark  bg-white fs-5"
+          className="border-0   text-decoration-none text-dark  bg-white fs-5"
         >
           <i className="bi bi-arrow-left-circle me-2 text-primary fs-4"></i>
           Back to Account
         </Link>
-        <div className="mt-5 d-flex justify-content-between row row-cols-1 row-cols-md-2">
-          <div className="col-12 col-md-6 justify-content-center p-2 p-lg-5">
+        <div className="mt-5  d-flex justify-content-between row row-cols-1 row-cols-md-2">
+          <div className="col-12 ps-4   col-md-6 justify-content-center p-2 p-lg-5">
             {/* Cards */}
             <div
               className={`carddd mt-3  rounded-1 container-fluid d-flex row row-cols-3 ${
@@ -174,10 +174,10 @@ function Selectcourse() {
             </div>
           </div>
 
-          <div className="col-12   col-md-6  mt-lg-3">
+          <div className="col-12 col-md-6  mt-lg-3">
             {/* Total Price Section */}
             <div className="totalcard  mt-5 rounded-top-2 border-0 ">
-              <h4 className="ms-md-3 ms-2 fs-3">Payment</h4>
+              <h4 className="ms-md-3 pt-2 ms-2 fs-3">Payment</h4>
               <p className=" text-center fs-5 text-body-secondary fw-bold ">
                 {selectedCourses.length > 0
                   ? "Selected Courses:"
