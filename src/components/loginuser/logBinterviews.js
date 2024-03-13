@@ -79,7 +79,7 @@ function LogBinterviews() {
                 <p>
                   <i className="bi bi-people-fill"></i> Last updated 03/2023
                 </p>
-              </div>
+               </div>
               <p className="card-text  d-block d-lg-none">
                 This course is for professionals with 0 to 10 years of
                 experience who is applying for a job and looking to ace their

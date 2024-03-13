@@ -327,9 +327,23 @@ body{
 .showiocn{
   border: 2px solid rgb(111, 106, 106);
   border-radius: 50%;
-  padding: 8px;
+  /* padding: 2px; */
+  padding-top: 3px;
+  padding-bottom: 2px;
   padding-left: 9px;
   padding-right: 9px;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+.shopicon {
+  border: 2px solid rgb(111, 106, 106);
+  border-radius: 50%;
+  padding: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-size: 25px;
+  margin-top: 3px;
 }
 
 .brandnamelgsc{
@@ -363,7 +377,6 @@ background-color: #F5F6FA;
 @media only screen and (min-width: 600px){
   .carddd {
       height: 150px;
-      
     }
 }
 

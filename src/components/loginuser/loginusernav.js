@@ -198,12 +198,12 @@ function Loginusernav() {
               </li>
 
               {/* -----------expriment---- */}
-              <li className="nav-item list-unstyled   me-4 mt-3 ">
+              <li className="nav-item list-unstyled mt-3 me-3 ">
                 <Link
                   to="/selectcourse"
                   className="nav-link   fw-bolder pointer-event"
                 >
-                  <i className="bi bi-cart3 fs-5  showiocn"></i>
+                  <i className="bi bi-cart3 shopicon"></i>
                 </Link>
               </li>
 
@@ -218,26 +218,20 @@ function Loginusernav() {
                 </button>
               </li>
 
-              {/* <li className="nav-item list-unstyled  me-1  mt-2 ">
-                <button className="nav-link fw-bolder pointer-event">
-                  <div className="showiocn border-0 bg-primary text-white ">
-                    PN
-                  </div>
-                </button>
-              </li> */}
-
               <li className="nav-item  list-unstyled me-1 mt-2">
                 <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                   <DropdownToggle className=" nav-link  border-0  bg-white  fw-bolder pointer-event">
                     <div className="showiocn border-0 bg-primary text-white">
-                      PN
+                      <i class="bi bi-person-circle"></i>
                     </div>
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem>Settings</DropdownItem>
                     <DropdownItem>
                       {" "}
-                      <Link className=" text-decoration-none text-dark" to="/">Log Out</Link>{" "}
+                      <Link className=" text-decoration-none text-dark" to="/">
+                        Log Out
+                      </Link>{" "}
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>

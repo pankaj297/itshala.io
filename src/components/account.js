@@ -1,24 +1,40 @@
 import React, { useState } from "react";
 import Data from "./Api";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Account() {
   const [apiData] = useState(Data);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [formValidity, setFormValidity] = useState({
-    name: false,
-    email: false,
-    password: false,
-  });
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    // const navigat = useNavigate();
+
     e.preventDefault();
-    if (formValidity.email && formValidity.password && formValidity.name) {
-      alert("🎉🍾🎊Account Created Successfully 🎉🍾🎊");
-      window.location = "/";
-
-    } else {
-      alert("Please fill in the required fields.");
+    // Perform client-side validation
+    try {
+     
+      if (email && password ) {
+        console.log(email, password);
+            await axios.post(
+          "http://localhost:8000/api/v1/users/createUser",
+          {
+            name,
+            email,
+            password,
+          }
+        );
+        alert("Account Created");
+       navigate("/Yourcourse");
+      }
+    } catch (error) {
+      alert( error.response.data.message);
+      console.log(error);
     }
   };
 
@@ -55,7 +71,7 @@ function Account() {
                     <>
                       <div
                         className="card logcard  w-75 col-md-6 mx-md-2 my-md-5"
-                        key={curElem}
+                        key={curElem.id}
                       >
                         <div className="card-body   text-white">
                           <div className="d-flex row row-cols-md-2">
@@ -65,12 +81,12 @@ function Account() {
                               className="img-fluid rounded-start-circle rounded-end-circle  col-md-3"
                               alt="img"
                             />
-                            <p className="card-title fs-4 fw-bold col-md-9">
+                            <div className="card-title fs-4 fw-bold col-md-9">
                               {name}
                               <p className="card-subtitle cmtcardbio mb-2">
                                 {bio}
                               </p>
-                            </p>
+                            </div>
                           </div>
                           <p className="card-text mt-2">{description}</p>
                         </div>
@@ -98,7 +114,7 @@ function Account() {
                 <p>
                   Already have an account?{" "}
                   <Link to="/signin" className="text-decoration-none ">
-                    Sign In
+                    Log In
                   </Link>
                 </p>
               </div>
@@ -143,19 +159,16 @@ function Account() {
                   <div className="form-floating fw-bold  text-secondary  bod border-5 col-10  col-lg-7 mb-3">
                     <input
                       type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       className="form-control  "
                       id="floatingInput"
                       placeholder="name@example.com"
                       required
-                      onBlur={(e) =>
-                        setFormValidity({
-                          ...formValidity,
-                          name: e.target.checkValidity(),
-                        })
-                      }
+
                     />
                     <label
-                      for="floatingInput"
+                      htmlFor="floatingInput"
                       className="form-label  was-validated "
                     >
                       Full Name
@@ -165,16 +178,13 @@ function Account() {
                   <div className="form-floating fw-bold  text-secondary  bod border-5 col-10  col-lg-7 mb-3">
                     <input
                       type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="form-control  "
                       id="floatingInput"
                       placeholder="name@example.com"
                       required
-                      onBlur={(e) =>
-                        setFormValidity({
-                          ...formValidity,
-                          email: e.target.checkValidity(),
-                        })
-                      }
+                      
                     />
                     <label
                       for="floatingInput"
@@ -193,14 +203,11 @@ function Account() {
                       className="form-control"
                       id="floatingPassword"
                       placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       required
                       minLength="6"
-                      onBlur={(e) =>
-                        setFormValidity({
-                          ...formValidity,
-                          password: e.target.checkValidity(),
-                        })
-                      }
+
                     />
                     <label for="floatingPassword" form="form-label">
                       Password

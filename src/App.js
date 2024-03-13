@@ -17,7 +17,7 @@ import Loginusernav from './components/loginuser/loginusernav';
 import Selectcourse from './components/loginuser/selectcourse';
 import Loginuserhome from './components/loginuser/loginuserhome';
 import LogSDS from './components/loginuser/logSDS';
-import LogDS from './components/loginuser/logDS';
+import LogDS from './components/loginuser/logSDS';
 import LogBinterviews from './components/loginuser/logBinterviews';
 import Loguserblog from './components/loginuser/loguserblog';
 

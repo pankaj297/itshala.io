@@ -1,32 +1,34 @@
 import React, { useState } from "react";
 import Data from "./Api";
-import { Link } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Sign() {
   const [apiData] = useState(Data);
-
-  const [formValidity, setFormValidity] = useState({
-    email: false,
-    password: false,
-  });
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  
 
-
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (formValidity.email && formValidity.password) {
-      alert("🎉🍾🎊Sign IN Successfully 🎉🍾🎊");
-      // navigate("/Yourcourse");
-      navigate("/Yourcourse");
-
-    } else {
-      alert("Please fill in the required fields.");
+    // Perform client-side validation
+    try {
+     
+      if (email && password) {
+        console.log(email, password);
+           await axios.post("http://localhost:8000/api/v1/users/loginUser",
+          {
+            email,
+            password,
+          }
+        );
+        alert("Login Success");
+        navigate("/Yourcourse");
+      }
+    } catch (error) {
+      alert(error.response.data.message);
+      console.log(error);
     }
   };
 
@@ -60,30 +62,28 @@ function Sign() {
                   const { name, bio, image, description } = curElem;
 
                   return (
-                    <>
-                      <div
-                        className="card logcard  w-75 col-md-6 mx-md-2 my-md-5"
-                        key={curElem}
-                      >
-                        <div className="card-body   text-white">
-                          <div className="d-flex row row-cols-md-2">
-                            <img
-                              //  src="img/cmt/himanshu2.jpg"
-                              src={image}
-                              className="img-fluid rounded-start-circle rounded-end-circle  col-md-3"
-                              alt="img"
-                            />
-                            <p className="card-title fs-4 fw-bold col-md-9">
-                              {name}
-                              <p className="card-subtitle cmtcardbio mb-2">
-                                {bio}
-                              </p>
+                    <div
+                      className="card logcard  w-75 col-md-6 mx-md-2 my-md-5"
+                      key={curElem.id}
+                    >
+                      <div className="card-body   text-white">
+                        <div className="d-flex row row-cols-md-2">
+                          <img
+                            //  src="img/cmt/himanshu2.jpg"
+                            src={image}
+                            className="img-fluid rounded-start-circle rounded-end-circle  col-md-3"
+                            alt="img"
+                          />
+                          <div className="card-title fs-4 fw-bold col-md-9">
+                            {name}
+                            <p className="card-subtitle cmtcardbio mb-2">
+                              {bio}
                             </p>
                           </div>
-                          <p className="card-text mt-2">{description}</p>
                         </div>
+                        <p className="card-text mt-2">{description}</p>
                       </div>
-                    </>
+                    </div>
                   );
                 })}
               </div>
@@ -102,7 +102,7 @@ function Sign() {
                 </a>
               </div>
               <div className="mt-5">
-                <h1 className="fw-bold ">Sign In</h1>
+                <h1 className="fw-bold ">Log In</h1>
                 <p>
                   New here ?{" "}
                   <Link to="/account" className="text-decoration-none ">
@@ -153,17 +153,14 @@ function Sign() {
                       type="email"
                       className="form-control  "
                       id="floatingInput"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="name@example.com"
                       required
-                      onBlur={(e) =>
-                        setFormValidity({
-                          ...formValidity,
-                          email: e.target.checkValidity(),
-                        })
-                      }
+                     
                     />
                     <label
-                      for="floatingInput"
+                      htmlFor="floatingInput"
                       className="form-label  was-validated "
                     >
                       Email address
@@ -180,31 +177,28 @@ function Sign() {
                       id="floatingPassword"
                       placeholder="Password"
                       required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       minLength="6"
-                      onBlur={(e) =>
-                        setFormValidity({
-                          ...formValidity,
-                          password: e.target.checkValidity(),
-                        })
-                      }
+                     
                     />
-                    <label for="floatingPassword" form="form-label">
+                    <label htmlFor="floatingPassword" form="form-label">
                       Password
                     </label>
                     <div className="invalid-feedback">
                       Please enter the password with minimum length of 6
                     </div>
                   </div>
-                  <p>
+                  <div>
                     <Link to="/forget" className=" float-end  col-6 mt-2 ">
                       Forget Password
                     </Link>
-                  </p>
+                  </div>
                   <button
                     className="btn  btn-primary fs-5  col-9 col-lg-6  me-2  mt-1 p-3"
                     type="submit"
                   >
-                    Sign In
+                    Log In
                   </button>
                 </form>
               </div>

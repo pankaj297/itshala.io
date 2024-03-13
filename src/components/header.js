@@ -145,7 +145,7 @@ function Header() {
             <ul className="d-flex">
               <li className="Courseslg nav-item dropdown fw-bolder d-none d-md-block list-unstyled pt-2 m-2">
                 <Link
-                  className=" nav-link dropdown-toggle"
+                  className=" nav-link active  dropdown-toggle"
                   role="button"
                   onClick={toggleCourses}
                   aria-expanded={isCoursesOpen}
@@ -171,14 +171,14 @@ function Header() {
                 </ul>
               </li>
               <li className="nav-item fw-bolder list-unstyled pt-2 m-2 me-0 d-none d-md-block">
-                <Link to="/blog" className="nav-link pointer-event active">
+                <Link to="/blog" className="nav-link active  pointer-event active">
                   Blog
                 </Link>
               </li>
 
               <li className="nav-item list-unstyled m-2 pt-2">
-                <Link to="/signin" className="nav-link fw-bolder pointer-event">
-                  Sign in
+                <Link to="/signin" className="nav-link active  fw-bolder pointer-event">
+                  Log in
                 </Link>
               </li>
 
