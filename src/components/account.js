@@ -30,7 +30,7 @@ function Account() {
               }
             );
         alert("Account Created");
-       navigate("/Yourcourse");
+       navigate("/signin");
       }
     } catch (error) {
       alert( error.response.data.message);
