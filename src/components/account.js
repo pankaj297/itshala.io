@@ -22,13 +22,13 @@ function Account() {
       if (email && password ) {
         console.log(email, password);
             await axios.post(
-          "http://localhost:8000/api/v1/users/createUser",
-          {
-            name,
-            email,
-            password,
-          }
-        );
+              "https://itshala-io-nodejs.onrender.com/api/v1/users/createUser",
+              {
+                name,
+                email,
+                password,
+              }
+            );
         alert("Account Created");
        navigate("/Yourcourse");
       }

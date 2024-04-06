@@ -17,12 +17,13 @@ function Sign() {
      
       if (email && password) {
         console.log(email, password);
-           await axios.post("http://localhost:8000/api/v1/users/loginUser",
-          {
-            email,
-            password,
-          }
-        );
+           await axios.post(
+             "https://itshala-io-nodejs.onrender.com/api/v1/users/loginUser",
+             {
+               email,
+               password,
+             }
+           );
         alert("Login Success");
         navigate("/Yourcourse");
       }
